@@ -38,6 +38,10 @@ body {
 .url {
     text-decoration: none;
 }
+.url_disabled {
+    text-decoration: none;
+    color: gray;
+}
 .logo {
     text-align: center;
     margin-top: 20px;
