@@ -73,9 +73,9 @@ function addEconomy(eco) {
     `<div class="type">${type}</div>
     <table class="craftIcon">
         <tr>
-            <th class="shopItem" item="${eco.item1}"><img src="${(eco == null) ? "../img/button_shop.png" : item[eco.item1].image}" alt=""><span class="count">${eco.countitem1}</span></th>
+            <th class="shopItem" item="${eco.item1}"><img src="${(eco == null) ? "/img/button_shop.png" : item[eco.item1].image}" alt=""><span class="count">${eco.countitem1}</span></th>
             <th class="arrow"></th>
-            <th class="shopItem" item="${eco.item2}"><img src="${(eco == null) ? "../img/button_shop.png" : item[eco.item2].image}" alt=""><span class="count">${eco.countitem2}</span></th>
+            <th class="shopItem" item="${eco.item2}"><img src="${(eco == null) ? "./img/button_shop.png" : item[eco.item2].image}" alt=""><span class="count">${eco.countitem2}</span></th>
         </tr>
     </table>
 </div>`
