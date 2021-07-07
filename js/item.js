@@ -113,7 +113,7 @@ var item = {
     },
     "Stable": {
         "name": "<span>Стойло</span>",
-        "image": "./img/shopItem/stable.png",
+        "image": "./img/shopItem/Stable.png",
         "lore": []
     },
     "Horse": {
