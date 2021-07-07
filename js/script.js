@@ -11,11 +11,6 @@ $("document").ready(function () {
     });
 });
 
-function play() {
-    var audio = document.getElementById("click");
-    audio.play();
-}
-
 document.addEventListener('mousemove', function (e) {
     hover(e);
 });
