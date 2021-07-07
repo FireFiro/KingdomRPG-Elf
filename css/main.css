@@ -38,7 +38,7 @@ body {
 .url {
     text-decoration: none;
 }
-.url_disabled {
+.urldisabled {
     text-decoration: none;
     color: gray;
 }
