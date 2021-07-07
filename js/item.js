@@ -105,7 +105,7 @@ var item = {
         "lore": []
     },
     "Area": {
-        "name": "<span>Дополнительная прощадь</span>",
+        "name": "<span>Дополнительная площадь</span>",
         "image": "./img/shopItem/area.png",
         "lore": [
             "<span class='green'>4x2</span>"
@@ -257,7 +257,7 @@ var item = {
         "lore": []
     },
     "Bread": {
-        "name": "<span>Хелб</span>",
+        "name": "<span>Хлеб</span>",
         "image": "./img/shopItem/bread.png",
         "lore": []
     }
