@@ -1,0 +1,49 @@
+@font-face {
+    font-family: Minecraft;
+    src: url(../Minecraft.ttf);
+}
+body {
+    background-image: url(../img/bg.jpg);
+    background-size:cover;
+    user-select: none; 
+}
+.carousel {
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 25px;
+}
+.table {
+    width: 350px;
+    height: 550px;
+    background-image: url(../img/test.png);
+    background-repeat: no-repeat;
+}
+.table img {
+    margin-top: 20px;
+    width: 200px;
+    height: 200px;
+    image-rendering: pixelated;
+}
+.carousel {
+    width: 350px;
+    height: 550px;
+}
+.text {
+    color: black;
+    font-family: Minecraft;
+    font-size: 20px;
+    padding-left: 26px;
+    padding-right: 26px;
+}
+.url {
+    text-decoration: none;
+}
+.logo {
+    text-align: center;
+    margin-top: 20px;
+}
+.logo img {
+    border-radius: 500px;
+    width: 150px;
+    image-rendering: pixelated;
+}
