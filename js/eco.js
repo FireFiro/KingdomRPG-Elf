@@ -380,7 +380,7 @@ var economy = [
     {   
         "type": "buy",
         "item1": "Coin",
-        "item2": "People_pickaxe_teari",
+        "item2": "People_pickaxe_tieri",
         "countitem1": 25,
         "countitem2": 1
     }
