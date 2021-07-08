@@ -7,6 +7,7 @@
 body {
     background-image: url(../img/shopbg.png);
     background-size:cover;
+    background-repeat: no-repeat;
     user-select: none; 
 }
 .info {
