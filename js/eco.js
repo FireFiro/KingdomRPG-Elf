@@ -369,5 +369,27 @@ var economy = [
         "item2": "Carrot",
         "countitem1": 1,
         "countitem2": 64
+    },
+    {   
+        "type": "buy",
+        "item1": "Coin",
+        "item2": "Book",
+        "countitem1": 1,
+        "countitem2": 3
+    },
+    {   
+        "type": "buy",
+        "item1": "Coin",
+        "item2": "People_pickaxe_teari",
+        "countitem1": 25,
+        "countitem2": 1
+    }
+    ,
+    {   
+        "type": "buy",
+        "item1": "Coin",
+        "item2": "People_axe_teari",
+        "countitem1": 25,
+        "countitem2": 1
     }
 ]

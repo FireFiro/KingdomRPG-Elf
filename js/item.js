@@ -260,5 +260,20 @@ var item = {
         "name": "<span>Хлеб</span>",
         "image": "./img/shopItem/bread.png",
         "lore": []
+    },
+    "People_pickaxe_tieri": {
+        "name": "<span>Стальная кирка</span>",
+        "image": "./img/shopItem/people_pickaxe.png",
+        "lore": []
+    },
+    "People_axe_tieri": {
+        "name": "<span>Стальной тапор</span>",
+        "image": "./img/shopItem/people_axe.png",
+        "lore": []
+    },
+    "Book": {
+        "name": "<span>Стальной тапор</span>",
+        "image": "./img/shopItem/book.png",
+        "lore": []
     }
 }
