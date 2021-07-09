@@ -81,18 +81,3 @@ function addEconomy(eco) {
 </div>`
 document.getElementById("economylist").append(newEconomy);
 }
-
-Push.create("Обновление!", {
-    body: `Убрано:
-    - Железная руда
-    - Золотая руда
-    Добавлено:
-    + Кучка железа -> 1 монета
-    + Кучка золота -> 1 монета`,
-    icon: '../img/penny.gif',
-    timeout: 4000,
-    onClick: function () {
-        window.focus();
-        this.close();
-    }
-});
