@@ -81,3 +81,10 @@ function addEconomy(eco) {
 </div>`
 document.getElementById("economylist").append(newEconomy);
 }
+
+var params = {
+    body: 'Краткое описание',
+    icon: './img/scroll.png' // размер например 40x40
+};
+
+var notification = new Notification('Заголовок', params);
