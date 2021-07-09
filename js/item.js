@@ -275,5 +275,15 @@ var item = {
         "name": "<span>Стальной тапор</span>",
         "image": "./img/shopItem/book.png",
         "lore": []
+    },
+    "Nuggets_gold": {
+        "name": "<span>Кусочки золота</span>",
+        "image": "./img/shopItem/nuggetsgold.png",
+        "lore": []
+    },
+    "Nuggets_iron": {
+        "name": "<span>Кусочки железа</span>",
+        "image": "./img/shopItem/nuggetsiron.png",
+        "lore": []
     }
 }
