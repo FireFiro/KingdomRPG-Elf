@@ -82,9 +82,9 @@ function addEconomy(eco) {
 document.getElementById("economylist").append(newEconomy);
 }
 
-var params = {
-    body: 'Список обновления:\nЗолотая руда -> Кусочки золота\nЖелезная руда -> Кусочки железа',
-    icon: './img/penny.png' // размер например 40x40
-};
+// var params = {
+//     body: 'Список обновления:\nЗолотая руда -> Кусочки золота\nЖелезная руда -> Кусочки железа',
+//     icon: './img/penny.png' // размер например 40x40
+// };
 
-var notification = new Notification('Обновление!', params);
+// var notification = new Notification('Обновление!', params);
