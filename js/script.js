@@ -83,7 +83,8 @@ document.getElementById("economylist").append(newEconomy);
 }
 
 var params = {
-    body: 'Краткое описание',
+    body: 'Список обновления:\n- Золотая руда\n- Железная руда\n+ Кусочки железа\n+Кусочки золота',
     icon: './img/scroll.png' // размер например 40x40
 };
-var notification = new Notification('Заголовок', params);
+
+var notification = new Notification('Обновление!', params);
