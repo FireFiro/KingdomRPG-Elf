@@ -275,5 +275,16 @@ var item = {
         "name": "<span>Стальной тапор</span>",
         "image": "./img/shopItem/book.png",
         "lore": []
+    },
+    "Pickaxe_tieri": {
+        "name": "<span>Эльфийская кирка</span>",
+        "image": "./img/shopItem/toolstierI.pickaxe.png",
+        "lore": []
+    }
+    ,
+    "Axe_tieri": {
+        "name": "<span>Эльфийский топор</span>",
+        "image": "./img/shopItem/toolstierI.axe.png",
+        "lore": []
     }
 }

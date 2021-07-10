@@ -52,7 +52,7 @@ var economy = [
         "type": "sale",
         "item1": "Feather",
         "item2": "Coin",
-        "countitem1": 32,
+        "countitem1": 96,
         "countitem2": 1
     },
     {   
@@ -381,15 +381,28 @@ var economy = [
         "type": "buy",
         "item1": "Coin",
         "item2": "People_pickaxe_tieri",
-        "countitem1": 25,
+        "countitem1": 23,
         "countitem2": 1
-    }
-    ,
+    },
     {   
         "type": "buy",
         "item1": "Coin",
         "item2": "People_axe_tieri",
-        "countitem1": 25,
+        "countitem1": 23,
+        "countitem2": 1
+    },
+    {   
+        "type": "buy",
+        "item1": "Coin",
+        "item2": "Pickaxe_tieri",
+        "countitem1": 28,
+        "countitem2": 1
+    },
+    {   
+        "type": "buy",
+        "item1": "Coin",
+        "item2": "Axe_tieri",
+        "countitem1": 28,
         "countitem2": 1
     }
 ]
