@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./img/logo.png" type="image/png">
-    <title>Elf | Галерея</title>
+    <title>Elf | Роли</title>
 </head>
-<link rel="stylesheet" href="./css/gallery.css">
+<link rel="stylesheet" href="./css/role.css">
 <link rel="stylesheet" href="./css/navbar.css">
 <link href="./css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="./css/balloon.css">
@@ -19,27 +19,30 @@
         <nav>
             <ul>
                 <li aria-label="Доска объявлений" data-balloon-pos="down"><a><img class="button_img" src="./img/button_sign_disabled.png"></li>
-                <li aria-label="Роли" data-balloon-pos="down"><a href="role.html"><img class="button_img"  src="./img/button_role.png"></a></li>
+                <li aria-label="Роли" data-balloon-pos="down"><div class="active"></div><a href="role.html"><img class="button_img"  src="./img/button_role.png"></a></li>
                 <li aria-label="Экономика" data-balloon-pos="down"><a href="economy.html"><img class="button_img"  src="./img/button_shop.png"></a></li>
                 <li aria-label="Законы" data-balloon-pos="down"><a href=""><img class="button_img"  src="./img/button_rule_disabled.png"></a></li>
-                <li aria-label="Галерея" data-balloon-pos="down"><div class="active"></div><a href="gallery.html"><img class="button_img"  src="./img/button_gallery.png"></a></li>
+                <li aria-label="Галерея" data-balloon-pos="down"><a href="gallery.html"><img class="button_img"  src="./img/button_gallery.png"></a></li>
             </ul>
         </nav>
     </div>
-    <div class="hoverItem" style="display: none;" id="hover">
-        lol
+    <div class="scroll">
+        <table class="table table-hover table-dark">
+            <thead>
+              <tr>
+                <th scope="col">Ветка</th>
+                <th scope="col">Знак/Имя</th>
+                <th scope="col">Описание</th>
+                <th scope="col">Механики</th>
+              </tr>
+            </thead>
+            <tbody id="body">
+
+            </tbody>
+          </table>
     </div>
-    <section>
-      <div id="container" class="container">
-        <span id="previous"><i data-feather="chevron-left"></i></span>
-        <span id="next"><i data-feather="chevron-right"></i></span>
-        <div id="slider" class="slider">
-        </div>
-      </div>
-    <section>
 </body>
 <script src="./js/visualjs/jQuery.js"></script>
-<script src="./js/datajs/gallery.js"></script> 
-<script src='https://unpkg.com/feather-icons'></script>
-<script src="./js/websuitejs/carousel.js"></script>
+<script src="./js/datajs/role.js"></script>
+<script src="./js/websuitejs/role.js"></script>
 </html>

@@ -1,0 +1,40 @@
+body{
+    background-image: url(../img/shopbg.png);
+    background-size:cover;
+    user-select: none; 
+}
+
+th img {
+    width: 20px;
+    image-rendering: pixelated;
+}
+
+td img {
+    width: 20px;
+    image-rendering: pixelated;
+}
+
+.center {
+    text-align: center;
+}
+.scroll {
+    margin-top: 60px;
+    margin-left: 13px;
+    /* width: auto; */
+    height: 733px;
+    overflow-y: auto;
+    position: relative;
+}
+.scroll::-webkit-scrollbar {
+    width: 14px;
+}
+
+.active {
+    position: absolute;
+    width: 35px;
+      height: 3px;
+    margin-top: 36px;
+    margin-left: 13px;
+    background: aqua;
+    border-radius: 20px;
+}
