@@ -3,7 +3,7 @@
     src: url(../Minecraft.ttf);
 }
 body {
-    background-image: url(../img/bg.jpg) center 0 fixed;
+    background-image: url(../img/bg.jpg);
     background-size:cover;
     background-repeat: no-repeat;
     user-select: none; 
