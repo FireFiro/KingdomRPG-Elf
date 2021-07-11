@@ -24,7 +24,7 @@ function createGallery() {
 }
 
 function addEventRPG(event) {
-  document.querySelector("#slider").insertAdjacentHTML(`afterbegin`, `<img class="image" name="${event.name}" date="${event.date}" src="${event.image}" alt="">`)
+  document.querySelector("#slider").insertAdjacentHTML(`beforeend`, `<img class="image" name="${event.name}" date="${event.date}" src="${event.image}" alt="">`)
 }
 
 $("document").ready(function () {
