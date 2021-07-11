@@ -4,8 +4,9 @@
 }
 
 body{
-  background-image: url(../img/shopbg.png);
+  background-image: url(../img/shopbg.png) center 0 fixed;
   background-size:cover;
+  background-repeat: no-repeat;
   user-select: none; 
 }
 
