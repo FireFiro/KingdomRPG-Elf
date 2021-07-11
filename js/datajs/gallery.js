@@ -11,11 +11,6 @@ var gallery = [
     },
     {
         "name": "Свадьба Дварфов",
-        "image": "./img/Event/Fera-im-as.png",
-        "date": "10.07.2021"
-    },
-    {
-        "name": "Свадьба Дварфов",
         "image": "./img/Event/Свадьба у дварфов.png",
         "date": "10.07.2021"
     },
