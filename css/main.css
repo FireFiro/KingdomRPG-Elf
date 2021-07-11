@@ -98,7 +98,7 @@ a {
     font-size: 10px;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 1px) {
     .infobtn {
       display: none;
     }
