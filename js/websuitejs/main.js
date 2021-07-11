@@ -17,6 +17,7 @@ function animation1() {
     button.finished.then(animation2)
 }
 function animation2() {
+    document.getElementById("scroll").style.display = "block";
     var infobox = anime({
         targets: ".scroll",
         delay: 500,
