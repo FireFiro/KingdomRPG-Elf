@@ -50,3 +50,49 @@ a {
     width: 150px;
     image-rendering: pixelated;
 }
+
+.scroll {
+    display: block;
+    position: fixed;
+    z-index: 1001;
+    height: 792px;
+    width: 400px;
+    background-color: rgb(255, 255, 255);
+    right: 550px;
+    bottom: 2px;
+    opacity: 0%;
+}
+
+.infobtn svg {
+    margin-top: 12px;
+}
+
+.closebtn {
+    text-align: right;
+}
+.infobtn {
+    display: block;
+    position: fixed;
+    z-index: 1001;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.4);
+    background-size: 45px;
+    background-repeat: no-repeat;
+    background-position: 50% 80%;
+    box-shadow: 0 0 2px rgb(0 0 0 / 50%);
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    right: 10px;
+    bottom: 10px;
+    text-align: center;
+}
+
+.center {
+    text-align: center;
+}
+
+.date {
+    font-size: 10px;
+}

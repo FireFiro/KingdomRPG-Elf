@@ -10,8 +10,8 @@
 <!-- CSS -->
 <link rel="stylesheet" href="./css/hover.css">
 <link rel="stylesheet" href="./css/main.css">
-<link href="./css/bootstrap.min.css" rel="stylesheet">
 <script src="./js/visualjs/bootstrap.bundle.min.js"></script>
+<link href="./css/bootstrap.min.css" rel="stylesheet">
 <body>
     <div class="logo">
         <img src="./img/elflogowhiteblink.gif">
@@ -29,7 +29,7 @@
                 </a>
             </div>
             <div class="carousel-item" data-bs-interval="999999">
-                <a href="role.html" class="url" onclick="sound()">
+                <a class="urldisabled" onclick="sound()">
                     <div class="table">
                         <img src="./img/book_and_quill.png" alt="">
                         <br>
@@ -59,7 +59,7 @@
                 </a>
             </div>
             <div class="carousel-item" data-bs-interval="999999">
-                <a href="gallery.html" class="url" onclick="sound()">
+                <a class="urldisabled" onclick="sound()">
                     <div style="padding: 5px;" class="table">
                         <img src="./img/paintings.png" alt="">
                         <br>
@@ -78,7 +78,19 @@
             <span class="visually-hidden">Следующий</span>
         </button>
     </div>
+    <div class="infobtn"><i data-feather="clipboard" color='white'></i></div>
+    <div class="scroll" id="scroll">
+        <div class="closebtn"><i data-feather="x" color='black'></i></div>
+        <div class="info">
+            <p class="center">Обновления</p>
+            <span>Обновление №1:</span><br>
+            <span>+ Добавленно меню обновлений</span><br>
+            <span class="date">11.07.2021</span><br>
+        </div>
+    </div>
 </body>
-<script>
-</script>
+<script src='https://unpkg.com/feather-icons'></script>
+<script src="./js/visualjs/jQuery.js"></script>
+<script src="./js/visualjs/anime.min.js"></script>
+<script src="./js/websuitejs/main.js"></script>
 </html>
