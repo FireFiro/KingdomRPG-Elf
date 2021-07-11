@@ -4,7 +4,7 @@ var economy = [
         "item1": "Hay_Block",
         "item2": "Coin",
         "countitem1": 64,
-        "countitem2": 2
+        "countitem2": 1
     },
     {   
         "type": "sale",
