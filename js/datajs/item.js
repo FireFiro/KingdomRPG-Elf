@@ -280,11 +280,20 @@ var item = {
         "name": "<span>Эльфийская кирка</span>",
         "image": "./img/shopItem/toolstierI.pickaxe.png",
         "lore": []
-    }
-    ,
+    },
     "Axe_tieri": {
         "name": "<span>Эльфийский топор</span>",
         "image": "./img/shopItem/toolstierI.axe.png",
+        "lore": []
+    },
+    "Nugget_Iron": {
+        "name": "<span>Железные кусочки</span>",
+        "image": "./img/shopItem/nuggetsiron.png",
+        "lore": []
+    },
+    "Nugget_Gold": {
+        "name": "<span>Золотые кусочки</span>",
+        "image": "./img/shopItem/nuggetsgold.png",
         "lore": []
     }
 }

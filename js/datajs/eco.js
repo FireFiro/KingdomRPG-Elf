@@ -120,17 +120,17 @@ var economy = [
     },
     {   
         "type": "sale",
-        "item1": "Iron_Ore",
+        "item1": "Nugget_Iron",
         "item2": "Coin",
         "countitem1": 64,
-        "countitem2": 5
+        "countitem2": 1
     },
     {   
         "type": "sale",
-        "item1": "Golden_Ore",
+        "item1": "Nugget_Gold",
         "item2": "Coin",
         "countitem1": 64,
-        "countitem2": 4
+        "countitem2": 1
     },
     {   
         "type": "sale",
