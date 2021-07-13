@@ -127,7 +127,7 @@ var item = {
         "lore": []
     },
     "Sugar_Cane": {
-        "name": "<span>Тросник</span>",
+        "name": "<span>Сахарный тростник</span>",
         "image": "./img/shopItem/sugar_cane.png",
         "lore": []
     },
