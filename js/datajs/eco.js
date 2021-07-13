@@ -45,7 +45,7 @@ var economy = [
         "type": "sale",
         "item1": "Sugar_Cane",
         "item2": "Coin",
-        "countitem1": 256,
+        "countitem1": 1152,
         "countitem2": 1
     },
     {   
