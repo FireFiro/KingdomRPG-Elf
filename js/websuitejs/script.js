@@ -68,6 +68,8 @@ function addEconomy(eco) {
         type = "Продажа"
     } else if (eco.type = "buy") {
         type = "Покупка"
+    } else if (eco.type = "sale_guardian") {
+        type = "Покупка (только стража)"
     }
     newEconomy.innerHTML = 
     `<div class="type">${type}</div>

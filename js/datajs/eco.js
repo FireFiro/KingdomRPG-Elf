@@ -42,10 +42,10 @@ var economy = [
         "countitem2": 1
     },
     {   
-        "type": "sale",
+        "type": "sale_guardian",
         "item1": "Sugar_Cane",
         "item2": "Coin",
-        "countitem1": 1152,
+        "countitem1": 256,
         "countitem2": 1
     },
     {   
