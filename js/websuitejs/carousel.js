@@ -24,7 +24,9 @@ function createGallery() {
 }
 
 function addEventRPG(event) {
-  document.querySelector("#slider").insertAdjacentHTML(`beforeend`, `<img class="image" name="${event.name}" date="${event.date}" src="${event.image}" alt="">`)
+  for (var i = 0; i < event.image.length; i++) {
+    document.querySelector("#slider").insertAdjacentHTML(`beforeend`, `<img class="image" name="${event.name}" date="${event.date}" src="${event.image[i]}" alt="">`)
+  }
 }
 
 $("document").ready(function () {
