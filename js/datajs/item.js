@@ -267,12 +267,12 @@ var item = {
         "lore": []
     },
     "People_axe_tieri": {
-        "name": "<span>Стальной тапор</span>",
+        "name": "<span>Стальной топор</span>",
         "image": "./img/shopItem/people_axe.png",
         "lore": []
     },
     "Book": {
-        "name": "<span>Стальной тапор</span>",
+        "name": "<span>Книга</span>",
         "image": "./img/shopItem/book.png",
         "lore": []
     },
