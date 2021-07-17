@@ -34,8 +34,13 @@ $("document").ready(function () {
   $(".image").mousemove(function (e) {
     let name = $(this).attr("name")
     let date = $(this).attr("date")
-    let info = `<p>Название: ${name}</p>
+    var info
+    if (name === "null") {
+      info = `<p>Название: Эльфиские скрины</p>`
+    } else {
+      info = `<p>Название: ${name}</p>
     <p>Дата: ${date}</p>`
+    }
     let hover = document.getElementById("hover");
       hover.style.display = "block"
       hover.innerHTML = info
