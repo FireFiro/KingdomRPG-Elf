@@ -138,7 +138,7 @@ var economy = [
     {
         "type": "farmer",
         "class": "shop",
-        "sale": ["Coin"],
+        "sale": ["Money"],
         "buy": "Honey_bottle",
         "sale_count": ["3"],
         "buy_count": "16",
