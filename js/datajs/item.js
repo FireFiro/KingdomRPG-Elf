@@ -2,37 +2,74 @@ var item = {
     "BowTear1": {
         "name": "<span>Лук</span>",
         "image": "./img/shopItem/weapon_bowi.png",
-        "lore": []
+        "lore": [
+            "",
+            "<span class='blue'>+20 Урон</span>",
+            "<span class='white'>300.00 Прочности</span>"
+        ]
     },
     "BowTear2": {
         "name": "<span>Эльфиский лук</span>",
         "image": "./img/shopItem/weapon_bowii.png",
-        "lore": []
+        "lore": [
+            "",
+            "<span class='blue'>+24 Урон</span>",
+            "<span class='white'>400.00 Прочности</span>"
+        ]
     },
     "Dagger": {
         "name": "<span>Эльфийский кинжал</span>",
         "image": "./img/shopItem/weapon_sword0.png",
-        "lore": []
+        "lore": [
+            "",
+            "<span class='blue'>+13 Урон</span>",
+            "<span class='red'>-2 Скорость атаки</span>",
+            "<span class='white'>200.00 Прочности</span>"
+        ]
     },
-    "Halmet": {
+    "Helmet": {
         "name": "<span>Резной шлем</span>",
-        "image": "./img/shopItem/armortierI.helmet.png",
-        "lore": []
+        "image": "./img/shopItem/armortierI_helmet.png",
+        "lore": [
+            "",
+            "<span class='blue'>+1.00 Твёрдость брони</span>",
+            "<span class='blue'>+6.00 Броня</span>",
+            "<span class='red'>-0.0012 Скорость</span>",
+            "<span class='white'>77.00 Прочности</span>"
+        ]
     },
     "Chest": {
         "name": "<span>Резной нагрудник</span>",
-        "image": "./img/shopItem/armortierI.chestplate.png",
-        "lore": []
+        "image": "./img/shopItem/armortierI_chestplate.png",
+        "lore": [
+            "",
+            "<span class='blue'>+1.00 Твёрдость брони</span>",
+            "<span class='blue'>+10.00 Броня</span>",
+            "<span class='red'>-0.0017 Скорость</span>",
+            "<span class='white'>112.00 Прочности</span>"
+        ]
     },
     "Leggings": {
         "name": "<span>Резные поножи</span>",
-        "image": "./img/shopItem/armortierI.leggings.png",
-        "lore": []
+        "image": "./img/shopItem/armortierI_leggings.png",
+        "lore": [
+            "",
+            "<span class='blue'>+1.00 Твёрдость брони</span>",
+            "<span class='blue'>+9.00 Броня</span>",
+            "<span class='red'>-0.0016 Скорость</span>",
+            "<span class='white'>105.00 Прочности</span>"
+        ]
     },
     "Boots": {
         "name": "<span>Резные ботинки</span>",
-        "image": "./img/shopItem/armortierI.boots.png",
-        "lore": []
+        "image": "./img/shopItem/armortierI_boots.png",
+        "lore": [
+            "",
+            "<span class='blue'>+1.00 Твёрдость брони</span>",
+            "<span class='blue'>+5.00 Броня</span>",
+            "<span class='red'>-0.0017 Скорость</span>",
+            "<span class='white'>91.00 Прочности</span>"
+        ]
     },
     "Shild": {
         "name": "<span>Лёгкий эльфийский щит</span>",
@@ -41,12 +78,24 @@ var item = {
     "Blade": {
         "name": "<span>Эльфийский клинок</span>",
         "image": "./img/shopItem/weapon_swordi.png",
-        "lore": []
+        "lore": [
+            "",
+            "<span class='blue'>+22 Урон</span>",
+            "<span class='blue'>20% Шанс пробить щит</span>",
+            "<span class='red'>-2.7 Скорость атаки</span>",
+            "<span class='white'>500.00 Прочности</span>"
+        ]
     },
     "Spear": {
         "name": "<span>Эльфийское копье</span>",
         "image": "./img/shopItem/weapon_pikei.png",
-        "lore": []
+        "lore": [
+            "",
+            "<span class='blue'>+20 Урон</span>",
+            "<span class='blue'>30% Шанс пробить щит</span>",
+            "<span class='red'>-2.7 Скорость атаки</span>",
+            "<span class='white'>400.00 Прочности</span>"
+        ]
     },
     "Arrow": {
         "name": "<span>Стрела</span>",
@@ -108,7 +157,7 @@ var item = {
         "name": "<span>Дополнительная площадь</span>",
         "image": "./img/shopItem/area.png",
         "lore": [
-            "<span class='green'>4x2</span>"
+            "<span class='green'>8 Блоков</span>"
         ]
     },
     "Stable": {
@@ -122,9 +171,13 @@ var item = {
         "lore": []
     },
     "Horse_Armor": {
-        "name": "<span>Конская броня</span>",
+        "name": "<span>Конский доспех</span>",
         "image": "./img/shopItem/golden_horse_armor.png",
-        "lore": []
+        "lore": [
+            "",
+            "<span class='blue'>+6.00 Твёрдость брони</span>",
+            "<span class='blue'>+50.00 Броня</span>"
+        ]
     },
     "Sugar_Cane": {
         "name": "<span>Сахарный тростник</span>",
@@ -242,7 +295,7 @@ var item = {
         "lore": []
     },
     "Coin": {
-        "name": "<span>Монета</span>",
+        "name": "<span>Денар</span>",
         "image": "./img/shopItem/coin.png",
         "lore": []
     },
@@ -263,27 +316,23 @@ var item = {
     },
     "People_pickaxe_tieri": {
         "name": "<span>Стальная кирка</span>",
-        "image": "./img/shopItem/people_pickaxe.png",
-        "lore": []
+        "image": "./img/shopItem/people_toolstieri_pickaxe.png",
+        "lore": [
+            "",
+            "<span class='white'>3000 Прочности</span>"
+        ]
     },
     "People_axe_tieri": {
         "name": "<span>Стальной топор</span>",
-        "image": "./img/shopItem/people_axe.png",
-        "lore": []
+        "image": "./img/shopItem/people_toolstieri_axe.png",
+        "lore": [
+            "",
+            "<span class='white'>2500 Прочности</span>"
+        ]
     },
     "Book": {
         "name": "<span>Книга</span>",
         "image": "./img/shopItem/book.png",
-        "lore": []
-    },
-    "Pickaxe_tieri": {
-        "name": "<span>Эльфийская кирка</span>",
-        "image": "./img/shopItem/toolstierI.pickaxe.png",
-        "lore": []
-    },
-    "Axe_tieri": {
-        "name": "<span>Эльфийский топор</span>",
-        "image": "./img/shopItem/toolstierI.axe.png",
         "lore": []
     },
     "Nugget_Iron": {
@@ -294,6 +343,185 @@ var item = {
     "Nugget_Gold": {
         "name": "<span>Золотые кусочки</span>",
         "image": "./img/shopItem/nuggetsgold.png",
+        "lore": []
+    },
+    "Paper": {
+        "name": "<span>Миллим</span>",
+        "image": "./img/shopItem/paper.png",
+        "lore": []
+    },
+    "Cake": {
+        "name": "<span>Торт</span>",
+        "image": "./img/shopItem/cake.png",
+        "lore": []
+    },
+    "Wheat": {
+        "name": "<span>Пшеница</span>",
+        "image": "./img/shopItem/wheat.png",
+        "lore": []
+    },
+    "Egg": {
+        "name": "<span>Яйцо</span>",
+        "image": "./img/shopItem/egg.png",
+        "lore": []
+    },
+    "White_wool": {
+        "name": "<span>Шерсть</span>",
+        "image": "./img/shopItem/White_wool.png",
+        "lore": []
+    },
+    "Honey_bottle": {
+        "name": "<span>Бутылочка Мёда</span>",
+        "image": "./img/shopItem/honney_bottle.png",
+        "lore": []
+    },
+    "Item_frame": {
+        "name": "<span>Рамка</span>",
+        "image": "./img/shopItem/item_frame.png",
+        "lore": []
+    },
+    "Saddle": {
+        "name": "<span>Седло</span>",
+        "image": "./img/shopItem/saddle.png",
+        "lore": []
+    },
+    "Bookshelves": {
+        "name": "<span>Книжная полка</span>",
+        "image": "./img/shopItem/bookshelves.png",
+        "lore": []
+    },
+    "Book_and_quill": {
+        "name": "<span>Книжная полка</span>",
+        "image": "./img/shopItem/book_and_quill.png",
+        "lore": []
+    },
+    "Gravel": {
+        "name": "<span>Гравий</span>",
+        "image": "./img/shopItem/gravel.png",
+        "lore": []
+    },
+    "Lapisdust": {
+        "name": "<span>Лазуритовая пыль/span>",
+        "image": "./img/shopItem/lapisdust.png",
+        "lore": []
+    },
+    "Ingot": {
+        "name": "<span>Эльфийская сталь</span>",
+        "image": "./img/shopItem/lapisdust.png",
+        "lore": []
+    },
+    "HelmetTierII": {
+        "name": "<span>Резной шлем</span>",
+        "image": "./img/shopItem/chainmail_helmet.png",
+        "lore": [
+            "",
+            "<span class='blue'>+1.50 Твёрдость брони</span>",
+            "<span class='blue'>+9.00 Броня</span>",
+            "<span class='red'>-0.003 Скорость</span>",
+            "<span class='white'>198.00 Прочности</span>"
+        ]
+    },
+    "ChestTierII": {
+        "name": "<span>Резной нагрудник</span>",
+        "image": "./img/shopItem/chainmail_chestplate.png",
+        "lore": [
+            "",
+            "<span class='blue'>+1.50 Твёрдость брони</span>",
+            "<span class='blue'>+16.00 Броня</span>",
+            "<span class='red'>-0.0043 Скорость</span>",
+            "<span class='white'>288.00 Прочности</span>"
+        ]
+    },
+    "LeggingsTierII": {
+        "name": "<span>Резные поножи</span>",
+        "image": "./img/shopItem/chainmail_leggings.png",
+        "lore": [
+            "",
+            "<span class='blue'>+1.50 Твёрдость брони</span>",
+            "<span class='blue'>+13.00 Броня</span>",
+            "<span class='red'>-0.004 Скорость</span>",
+            "<span class='white'>270.00 Прочности</span>"
+        ]
+    },
+    "BootsTierII": {
+        "name": "<span>Резные ботинки</span>",
+        "image": "./img/shopItem/chainmail_boots.png",
+        "lore": [
+            "",
+            "<span class='blue'>+1.50 Твёрдость брони</span>",
+            "<span class='blue'>+7.00 Броня</span>",
+            "<span class='red'>-0.0035 Скорость</span>",
+            "<span class='white'>234.00 Прочности</span>"
+        ]
+    },
+    "Armor_tierII": {
+        "name": "<span>Сет брони</span>",
+        "image": "./img/shopItem/armor_set_tierII.png",
+        "lore": []
+    },
+    "Salt": {
+        "name": "<span>Соль</span>",
+        "image": "./img/shopItem/all_salt.png",
+        "lore": []
+    },
+    "Money": {
+        "name": "<span>Купюра</span>",
+        "image": "./img/shopItem/money.png",
+        "lore": []
+    },
+    "Iron_hummer": {
+        "name": "<span>Кузнечный молот</span>",
+        "image": "./img/shopItem/all_hummer.png",
+        "lore": [
+            "",
+            "<span class='white'>26 прочности</span>"
+        ]
+    },
+    "Elf_hummer": {
+        "name": "<span>Кузнечный молот</span>",
+        "image": "./img/shopItem/elf_toolstieri_hammer.png",
+        "lore": [
+            "",
+            "<span class='white'>100 прочности</span>"
+        ]
+    },
+    "Elf_pickaxe_tieri": {
+        "name": "<span>Эльфийская крика</span>",
+        "image": "./img/shopItem/elf_toolstieri_pickaxe.png",
+        "lore": [
+            "",
+            "<span class='white'>2000 Прочности</span>"
+        ]
+    },
+    "Elf_axe_tieri": {
+        "name": "<span>Эльфийский топор</span>",
+        "image": "./img/shopItem/elf_toolstieri_axe.png",
+        "lore": [
+            "",
+            "<span class='white'>1500 Прочности</span>"
+        ]
+    },
+    "Elf_shovel_tieri": {
+        "name": "<span>Эльфийская лопата</span>",
+        "image": "./img/shopItem/elf_toolstieri_shovel.png",
+        "lore": [
+            "",
+            "<span class='white'>1000 Прочности</span>"
+        ]
+    },
+    "Bone_meal": {
+        "name": "<span>Костная мука</span>",
+        "image": "./img/shopItem/bone_meal.png",
+        "lore": []
+    },
+    "Raw_cod": {
+        "name": "<span>Сырая треска</span>",
+        "image": "./img/shopItem/raw_cod.png",
+        "lore": []
+    },
+    "Raw_salmon": {
+        "name": "<span>Сырой лосось</span>",
+        "image": "./img/shopItem/raw_salmon.png",
         "lore": []
     }
 }

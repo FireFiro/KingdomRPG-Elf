@@ -26,13 +26,22 @@
             </ul>
         </nav>
     </div>
+    <div class="sort">
+        <button class="sort_btn" onclick="sortCrafts('farmer')"><img class="button_img" src="./img/button_farmer.png"></button>
+        <button class="sort_btn" onclick="sortCrafts('miner')"><img class="button_img" src="./img/button_miner.png"></button>
+        <button class="sort_btn" onclick="sortCrafts('military')"><img class="button_img" src="./img/button_sword.png"></button>
+        <button class="sort_btn" onclick="sortCrafts('other')"><img class="button_img" src="./img/button_other.png"></button>
+        <button class="sort_btn" onclick="sortCrafts(null)"><img class="button_img" src="./img/button_none.png"></button>
+    </div>
     <div class="scroll" id="economylist">
     </div>
     <div class="hoverItem" style="display: none;" id="hover">
         lol
     </div>
+    <!-- <div class="infobtn"><i data-feather="clipboard" color='white'></i></div> -->
 </body>
 <!-- <script src="./js/bootstrap.bundle.min.js"></script> -->
+<script src='https://unpkg.com/feather-icons'></script>
 <script src="./js/visualjs/jQuery.js"></script>
 <script src="./js/datajs/item.js"></script>
 <script src="./js/datajs/eco.js"></script>

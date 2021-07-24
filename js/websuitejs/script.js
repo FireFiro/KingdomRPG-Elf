@@ -11,6 +11,19 @@ $("document").ready(function () {
     });
 });
 
+function sortCrafts(filterGroup) {
+    let list = document.querySelectorAll('.shop');
+    list.forEach(elem => {
+        console.log(elem.getAttribute("type"))
+        console.log(filterGroup)
+        if ((!filterGroup || elem.getAttribute("type") == filterGroup/* || elem.getAttribute("type") == "minecraft"*/ || elem.getAttribute("type") == "all")) {
+            elem.classList.remove('hide');
+        } else {
+            elem.classList.add('hide');
+        }
+    });
+}
+
 document.addEventListener('mousemove', function (e) {
     hover(e);
 });
@@ -52,8 +65,9 @@ function createEconomy() {
 }
 
 function addEconomy(eco) {
-    let newEconomy = document.createElement("div")
-    newEconomy.classList.add("shop")
+    var newEconomy = document.createElement("div")
+    var arrow = document.getElementById('arrow') 
+    newEconomy.classList.add(eco.class)
     newEconomy.setAttribute("type", eco.type)
     if (item[eco.item1] == "null") {
         console.log("Unknown ITEM: " + eco.item1)
@@ -64,22 +78,37 @@ function addEconomy(eco) {
         return;
     }
     var type = ""
-    if (eco.type == "sale") {
+    if (eco.type == "military") {
         type = "Продажа"
-    } else if (eco.type == "buy") {
+    } else {
         type = "Покупка"
-    } else if (eco.type == "sale_guardian") {
-        type = "Покупка (стража)"
     }
-    newEconomy.innerHTML = 
-    `<div class="type">${type}</div>
-    <table class="craftIcon">
-        <tr>
-            <th class="shopItem" item="${eco.item1}"><img src="${(eco == null) ? "/img/button_shop.png" : item[eco.item1].image}" alt=""><span class="count">${eco.countitem1}</span></th>
-            <th class="arrow"></th>
-            <th class="shopItem" item="${eco.item2}"><img src="${(eco == null) ? "./img/button_shop.png" : item[eco.item2].image}" alt=""><span class="count">${eco.countitem2}</span></th>
-        </tr>
-    </table>
-</div>`
+
+    var html = ""
+    if (eco.sale.length > 1) {
+        newEconomy.style.width = "262px"
+        html += `<div class="type">${type}</div>
+        <table class="craftIcon">
+            <tr>
+                <th class="shopItem" item="${eco.sale[0]}"><img src="${(eco == null) ? "/img/button_shop.png" : item[eco.sale[0]].image}" alt=""><span class="count">${eco.sale_count[0]}</span></th>
+                <th class="none"></th>
+                <th class="shopItem" item="${eco.sale[1]}"><img src="${(eco == null) ? "/img/button_shop.png" : item[eco.sale[1]].image}" alt=""><span class="count">${eco.sale_count[1]}</span></th>
+                <th class="arrow" style="padding-left: 25px; padding-right: 25px;"></th>
+                <th class="shopItem" item="${eco.buy}"><img src="${(eco == null) ? "./img/button_shop.png" : item[eco.buy].image}" alt=""><span class="count">${eco.buy_count}</span></th>
+            </tr>
+        </table>
+    </div>`
+    } else if (eco.sale.length = 1) {
+        html += `<div class="type">${type}</div>
+        <table class="craftIcon">
+            <tr>
+                <th class="shopItem" item="${eco.sale}"><img src="${(eco == null) ? "/img/button_shop.png" : item[eco.sale].image}" alt=""><span class="count">${eco.sale_count}</span></th>
+                <th class="arrow"></th>
+                <th class="shopItem" item="${eco.buy}"><img src="${(eco == null) ? "./img/button_shop.png" : item[eco.buy].image}" alt=""><span class="count">${eco.buy_count}</span></th>
+            </tr>
+        </table>
+    </div>`
+    }
+    newEconomy.innerHTML = html
 document.getElementById("economylist").append(newEconomy);
 }

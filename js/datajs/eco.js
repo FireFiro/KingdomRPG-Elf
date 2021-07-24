@@ -1,408 +1,668 @@
 var economy = [
-    {   
-        "type": "sale",
-        "item1": "Hay_Block",
-        "item2": "Coin",
-        "countitem1": 64,
-        "countitem2": 1
+    {
+        "type": "farmer",
+        "class": "shop",
+        "sale": ["Money",],
+        "buy": "Carrot",
+        "sale_count": ["3"],
+        "buy_count": "16",
     },
-    {   
-        "type": "sale",
-        "item1": "Fish",
-        "item2": "Coin",
-        "countitem1": 128,
-        "countitem2": 1
+    {
+        "type": "farmer",
+        "class": "shop",
+        "sale": ["Money"],
+        "buy": "Bread",
+        "sale_count": ["4"],
+        "buy_count": "16",
     },
-    {   
-        "type": "sale",
-        "item1": "Chicken",
-        "item2": "Coin",
-        "countitem1": 64,
-        "countitem2": 1
+    {
+        "type": "farmer",
+        "class": "shop",
+        "sale": ["Money"],
+        "buy": "Rabbit",
+        "sale_count": ["3"],
+        "buy_count": "16",
     },
-    {   
-        "type": "sale",
-        "item1": "Mutton",
-        "item2": "Coin",
-        "countitem1": 64,
-        "countitem2": 1
+    {
+        "type": "farmer",
+        "class": "shop",
+        "sale": ["Money"],
+        "buy": "Mutton",
+        "sale_count": ["1"],
+        "buy_count": "16",
     },
-    {   
-        "type": "sale",
-        "item1": "Rabbit",
-        "item2": "Coin",
-        "countitem1": 64,
-        "countitem2": 1
+    {
+        "type": "farmer",
+        "class": "shop",
+        "sale": ["Money"],
+        "buy": "Chicken",
+        "sale_count": ["1"],
+        "buy_count": "16",
     },
-    {   
-        "type": "sale",
-        "item1": "Honney_Block",
-        "item2": "Coin",
-        "countitem1": 16,
-        "countitem2": 1
+    {
+        "type": "farmer",
+        "class": "shop",
+        "sale": ["Money"],
+        "buy": "Cake",
+        "sale_count": ["2"],
+        "buy_count": "1",
     },
-    {   
-        "type": "sale_guardian",
-        "item1": "Sugar_Cane",
-        "item2": "Coin",
-        "countitem1": 256,
-        "countitem2": 1
+    {
+        "type": "farmer",
+        "class": "shop",
+        "sale": ["Money"],
+        "buy": "Fish",
+        "sale_count": ["1"],
+        "buy_count": "16",
     },
-    {   
-        "type": "sale",
-        "item1": "Feather",
-        "item2": "Coin",
-        "countitem1": 96,
-        "countitem2": 1
+    {
+        "type": "farmer",
+        "class": "shop",
+        "sale": ["Coin"],
+        "buy": "Wheat",
+        "sale_count": ["1"],
+        "buy_count": "64",
     },
-    {   
-        "type": "sale",
-        "item1": "Rabbit_Hide",
-        "item2": "Coin",
-        "countitem1": 32,
-        "countitem2": 1
+    {
+        "type": "farmer",
+        "class": "shop",
+        "sale": ["Money"],
+        "buy": "Oak_Log",
+        "sale_count": ["5"],
+        "buy_count": "64",
     },
-    {   
-        "type": "sale",
-        "item1": "Oak_Log",
-        "item2": "Coin",
-        "countitem1": 64,
-        "countitem2": 1
+    {
+        "type": "farmer",
+        "class": "shop",
+        "sale": ["Money"],
+        "buy": "Spruce_Log",
+        "sale_count": ["5"],
+        "buy_count": "64",
     },
-    {   
-        "type": "sale",
-        "item1": "Spruce_Log",
-        "item2": "Coin",
-        "countitem1": 64,
-        "countitem2": 1
+    {
+        "type": "farmer",
+        "class": "shop",
+        "sale": ["Money"],
+        "buy": "Birch_Log",
+        "sale_count": ["3"],
+        "buy_count": "64",
     },
-    {   
-        "type": "sale",
-        "item1": "Birch_Log",
-        "item2": "Coin",
-        "countitem1": 128,
-        "countitem2": 1
+    {
+        "type": "farmer",
+        "class": "shop",
+        "sale": ["Money"],
+        "buy": "Jungle_Log",
+        "sale_count": ["3"],
+        "buy_count": "64",
     },
-    {   
-        "type": "sale",
-        "item1": "Jungle_Log",
-        "item2": "Coin",
-        "countitem1": 128,
-        "countitem2": 1
+    {
+        "type": "farmer",
+        "class": "shop",
+        "sale": ["Money"],
+        "buy": "Acacia_Log",
+        "sale_count": ["3"],
+        "buy_count": "64",
     },
-    {   
-        "type": "sale",
-        "item1": "Acacia_Log",
-        "item2": "Coin",
-        "countitem1": 128,
-        "countitem2": 1
+    {
+        "type": "farmer",
+        "class": "shop",
+        "sale": ["Money"],
+        "buy": "Dark_Oak_Log",
+        "sale_count": ["3"],
+        "buy_count": "64",
     },
-    {   
-        "type": "sale",
-        "item1": "Dark_Oak_Log",
-        "item2": "Coin",
-        "countitem1": 128,
-        "countitem2": 1
-    },  
-    {   
-        "type": "sale",
-        "item1": "Carrot",
-        "item2": "Coin",
-        "countitem1": 192,
-        "countitem2": 1
+    {
+        "type": "farmer",
+        "class": "shop",
+        "sale": ["Coin"],
+        "buy": "Feather",
+        "sale_count": ["6"],
+        "buy_count": "16",
     },
-    {   
-        "type": "sale",
-        "item1": "Cobblestone",
-        "item2": "Coin",
-        "countitem1": 256,
-        "countitem2": 1
+    {
+        "type": "farmer",
+        "class": "shop",
+        "sale": ["Coin"],
+        "buy": "Egg",
+        "sale_count": ["3"],
+        "buy_count": "16",
     },
-    {   
-        "type": "sale",
-        "item1": "Nugget_Iron",
-        "item2": "Coin",
-        "countitem1": 64,
-        "countitem2": 1
+    {
+        "type": "farmer",
+        "class": "shop",
+        "sale": ["Money"],
+        "buy": "White_wool",
+        "sale_count": ["3"],
+        "buy_count": "16",
     },
-    {   
-        "type": "sale",
-        "item1": "Nugget_Gold",
-        "item2": "Coin",
-        "countitem1": 64,
-        "countitem2": 1
+    {
+        "type": "farmer",
+        "class": "shop",
+        "sale": ["Coin"],
+        "buy": "Honey_bottle",
+        "sale_count": ["3"],
+        "buy_count": "16",
     },
-    {   
-        "type": "sale",
-        "item1": "Diamond",
-        "item2": "Coin",
-        "countitem1": 32,
-        "countitem2": 4
+    {
+        "type": "farmer",
+        "class": "shop",
+        "sale": ["Coin"],
+        "buy": "Item_frame",
+        "sale_count": ["1"],
+        "buy_count": "8",
     },
-    {   
-        "type": "sale",
-        "item1": "Lapis_Lazuli",
-        "item2": "Coin",
-        "countitem1": 32,
-        "countitem2": 1
+    {
+        "type": "farmer",
+        "class": "shop",
+        "sale": ["Money"],
+        "buy": "Armor",
+        "sale_count": ["20"],
+        "buy_count": "1",
     },
-    {   
-        "type": "sale",
-        "item1": "Quartz",
-        "item2": "Coin",
-        "countitem1": 32,
-        "countitem2": 1
+    {
+        "type": "farmer",
+        "class": "shop",
+        "sale": [
+            "Money",
+            "Coin"
+        ],
+        "buy": "Helmet",
+        "sale_count": [
+            "5",
+            "2"
+        ],
+        "buy_count": "1",
     },
-    {   
-        "type": "sale",
-        "item1": "Coal",
-        "item2": "Coin",
-        "countitem1": 32,
-        "countitem2": 1
+    {
+        "type": "farmer",
+        "class": "shop",
+        "sale": [
+            "Money",
+            "Coin"
+        ],
+        "buy": "Chest",
+        "sale_count": [
+            "8",
+            "2"
+        ],
+        "buy_count": "1",
     },
-    {   
-        "type": "sale",
-        "item1": "Granite",
-        "item2": "Coin",
-        "countitem1": 128,
-        "countitem2": 1
+    {
+        "type": "farmer",
+        "class": "shop",
+        "sale": [
+            "Money",
+            "Coin"
+        ],
+        "buy": "Leggings",
+        "sale_count": [
+            "7",
+            "2"
+        ],
+        "buy_count": "1",
     },
-    {   
-        "type": "sale",
-        "item1": "Andesite",
-        "item2": "Coin",
-        "countitem1": 64,
-        "countitem2": 1
+    {
+        "type": "farmer",
+        "class": "shop",
+        "sale": [
+            "Money",
+            "Coin"
+        ],
+        "buy": "Boots",
+        "sale_count": [
+            "4",
+            "2"
+        ],
+        "buy_count": "1",
     },
-    {   
-        "type": "sale",
-        "item1": "Diorite",
-        "item2": "Coin",
-        "countitem1": 96,
-        "countitem2": 1
+    {
+        "type": "farmer",
+        "class": "shop",
+        "sale": [
+            "Money",
+            "Coin"
+        ],
+        "buy": "Saddle",
+        "sale_count": [
+            "6",
+            "6"
+        ],
+        "buy_count": "1",
     },
-    {   
-        "type": "sale",
-        "item1": "Sand",
-        "item2": "Coin",
-        "countitem1": 192,
-        "countitem2": 1
+    {
+        "type": "farmer",
+        "class": "shop",
+        "sale": ["Coin"],
+        "buy": "String",
+        "sale_count": ["5"],
+        "buy_count": "16",
     },
-    {   
-        "type": "sale",
-        "item1": "Spider_Eye",
-        "item2": "Coin",
-        "countitem1": 24,
-        "countitem2": 1
+    {
+        "type": "farmer",
+        "class": "shop",
+        "sale": ["Coin"],
+        "buy": "Book",
+        "sale_count": ["9"],
+        "buy_count": "3",
     },
-    {   
-        "type": "sale",
-        "item1": "Flint",
-        "item2": "Coin",
-        "countitem1": 64,
-        "countitem2": 1
+    {
+        "type": "farmer",
+        "class": "shop",
+        "sale": [
+            "Money",
+            "Coin"
+        ],
+        "buy": "Bookshelves",
+        "sale_count": [
+            "1",
+            "2"
+        ],
+        "buy_count": "3",
     },
-    {   
-        "type": "sale",
-        "item1": "String",
-        "item2": "Coin",
-        "countitem1": 64,
-        "countitem2": 1
+    {
+        "type": "farmer",
+        "class": "shop",
+        "sale": ["Coin"],
+        "buy": "Book_and_quill",
+        "sale_count": ["5"],
+        "buy_count": "3",
     },
-    {   
-        "type": "buy",
-        "item1": "Coin",
-        "item2": "BowTear1",
-        "countitem1": 1,
-        "countitem2": 1
+    {
+        "type": "miner",
+        "class": "shop",
+        "sale": ["Coin"],
+        "buy": "Gravel",
+        "sale_count": ["4"],
+        "buy_count": "64",
     },
-    {   
-        "type": "buy",
-        "item1": "Coin",
-        "item2": "Dagger",
-        "countitem1": 5,
-        "countitem2": 1
+    {
+        "type": "miner",
+        "class": "shop",
+        "sale": ["Money"],
+        "buy": "Cobblestone",
+        "sale_count": ["1"],
+        "buy_count": "64x6",
     },
-    {   
-        "type": "buy",
-        "item1": "Coin",
-        "item2": "Armor",
-        "countitem1": 10,
-        "countitem2": 1
+    {
+        "type": "miner",
+        "class": "shop",
+        "sale": ["Money"],
+        "buy": "Granite",
+        "sale_count": ["1"],
+        "buy_count": "64x4",
     },
-    {   
-        "type": "buy",
-        "item1": "Coin",
-        "item2": "Shild",
-        "countitem1": 10,
-        "countitem2": 1
+    {
+        "type": "miner",
+        "class": "shop",
+        "sale": ["Money"],
+        "buy": "Diorite",
+        "sale_count": ["1"],
+        "buy_count": "64x4",
     },
-    {   
-        "type": "buy",
-        "item1": "Coin",
-        "item2": "BowTear2",
-        "countitem1": 8,
-        "countitem2": 1
+    {
+        "type": "miner",
+        "class": "shop",
+        "sale": ["Money"],
+        "buy": "Andesite",
+        "sale_count": ["1"],
+        "buy_count": "64x4",
     },
-    {   
-        "type": "buy",
-        "item1": "Coin",
-        "item2": "Spear",
-        "countitem1": 6,
-        "countitem2": 1
+    {
+        "type": "miner",
+        "class": "shop",
+        "sale": ["Money"],
+        "buy": "Coal",
+        "sale_count": ["1"],
+        "buy_count": "16",
     },
-    {   
-        "type": "buy",
-        "item1": "Coin",
-        "item2": "Blade",
-        "countitem1": 10,
-        "countitem2": 1
+    {
+        "type": "miner",
+        "class": "shop",
+        "sale": ["Money"],
+        "buy": "Nugget_Iron",
+        "sale_count": ["3"],
+        "buy_count": "64",
     },
-    {   
-        "type": "buy",
-        "item1": "Coin",
-        "item2": "Arrow",
-        "countitem1": 3,
-        "countitem2": 64
+    {
+        "type": "miner",
+        "class": "shop",
+        "sale": [
+            "Money",
+            "Coin"
+        ],
+        "buy": "Lapisdust",
+        "sale_count": [
+            "1",
+            "3"
+        ],
+        "buy_count": "16",
     },
-    {   
-        "type": "buy",
-        "item1": "Coin",
-        "item2": "Crystal",
-        "countitem1": 10,
-        "countitem2": 5
+    {
+        "type": "miner",
+        "class": "shop",
+        "sale": ["Coin"],
+        "buy": "Quartz",
+        "sale_count": ["4"],
+        "buy_count": "16",
     },
-    {   
-        "type": "buy",
-        "item1": "Coin",
-        "item2": "Fish",
-        "countitem1": 8,
-        "countitem2": 32
+    {
+        "type": "miner",
+        "class": "shop",
+        "sale": ["Money"],
+        "buy": "Nugget_Gold",
+        "sale_count": ["2"],
+        "buy_count": "32",
     },
-    {   
-        "type": "buy",
-        "item1": "Coin",
-        "item2": "Chicken",
-        "countitem1": 3,
-        "countitem2": 32
+    {
+        "type": "miner",
+        "class": "shop",
+        "sale": ["Money"],
+        "buy": "Diamond",
+        "sale_count": ["3"],
+        "buy_count": "32",
     },
-    {   
-        "type": "buy",
-        "item1": "Coin",
-        "item2": "Mutton",
-        "countitem1": 3,
-        "countitem2": 32
+    {
+        "type": "miner",
+        "class": "shop",
+        "sale": ["Money"],
+        "buy": "Ingot",
+        "sale_count": ["2"],
+        "buy_count": "1",
     },
-    {   
-        "type": "buy",
-        "item1": "Coin",
-        "item2": "Rabbit",
-        "countitem1": 3,
-        "countitem2": 32
+    {
+        "type": "miner",
+        "class": "shop",
+        "sale": ["Money"],
+        "buy": "Elf_pickaxe_tieri",
+        "sale_count": ["10"],
+        "buy_count": "1",
     },
-    {   
-        "type": "buy",
-        "item1": "Coin",
-        "item2": "Hay_Block",
-        "countitem1": 1,
-        "countitem2": 8
+    {
+        "type": "miner",
+        "class": "shop",
+        "sale": ["Money"],
+        "buy": "Elf_axe_tieri",
+        "sale_count": ["10"],
+        "buy_count": "1",
     },
-    {   
-        "type": "buy",
-        "item1": "Coin",
-        "item2": "House_Small",
-        "countitem1": 60,
-        "countitem2": 1
+    {
+        "type": "miner",
+        "class": "shop",
+        "sale": ["Money"],
+        "buy": "Elf_shovel_tieri",
+        "sale_count": ["4"],
+        "buy_count": "1",
     },
-    {   
-        "type": "buy",
-        "item1": "Coin",
-        "item2": "HouseT",
-        "countitem1": 65,
-        "countitem2": 1
+    {
+        "type": "miner",
+        "class": "shop",
+        "sale": ["Money"],
+        "buy": "Iron_hummer",
+        "sale_count": ["5"],
+        "buy_count": "1",
     },
-    {   
-        "type": "buy",
-        "item1": "Coin",
-        "item2": "HouseP",
-        "countitem1": 70,
-        "countitem2": 1
+    {
+        "type": "miner",
+        "class": "shop",
+        "sale": ["Money"],
+        "buy": "Elf_hummer",
+        "sale_count": ["15"],
+        "buy_count": "1",
     },
-    {   
-        "type": "buy",
-        "item1": "Coin",
-        "item2": "Area",
-        "countitem1": 8,
-        "countitem2": 1
+    {
+        "type": "miner",
+        "class": "shop",
+        "sale": ["Money"],
+        "buy": "People_pickaxe_tieri",
+        "sale_count": ["16"],
+        "buy_count": "1",
     },
-    {   
-        "type": "buy",
-        "item1": "Coin",
-        "item2": "Stable",
-        "countitem1": 25,
-        "countitem2": 1
+    {
+        "type": "miner",
+        "class": "shop",
+        "sale": ["Money"],
+        "buy": "People_axe_tieri",
+        "sale_count": ["16"],
+        "buy_count": "1",
     },
-    {   
-        "type": "buy",
-        "item1": "Coin",
-        "item2": "Horse",
-        "countitem1": 30,
-        "countitem2": 1
+    {
+        "type": "miner",
+        "class": "shop",
+        "sale": ["Coin"],
+        "buy": "BowTear1",
+        "sale_count": ["2"],
+        "buy_count": "1",
     },
-    {   
-        "type": "buy",
-        "item1": "Coin",
-        "item2": "Horse_Armor",
-        "countitem1": 20,
-        "countitem2": 1
+    {
+        "type": "miner",
+        "class": "shop",
+        "sale": ["Money"],
+        "buy": "BowTear2",
+        "sale_count": ["5"],
+        "buy_count": "1",
     },
-    {   
-        "type": "buy",
-        "item1": "Coin",
-        "item2": "Bread",
-        "countitem1": 1,
-        "countitem2": 32
+    {
+        "type": "miner",
+        "class": "shop",
+        "sale": [
+            "Money",
+            "Coin"
+        ],
+        "buy": "Dagger",
+        "sale_count": [
+            "1",
+            "4"
+        ],
+        "buy_count": "1",
     },
-    {   
-        "type": "buy",
-        "item1": "Coin",
-        "item2": "Carrot",
-        "countitem1": 1,
-        "countitem2": 64
+    {
+        "type": "miner",
+        "class": "shop",
+        "sale": ["Money"],
+        "buy": "Blade",
+        "sale_count": ["9"],
+        "buy_count": "1",
     },
-    {   
-        "type": "buy",
-        "item1": "Coin",
-        "item2": "Book",
-        "countitem1": 1,
-        "countitem2": 3
+    {
+        "type": "miner",
+        "class": "shop",
+        "sale": ["Money"],
+        "buy": "Spear",
+        "sale_count": ["3"],
+        "buy_count": "1",
     },
-    {   
-        "type": "buy",
-        "item1": "Coin",
-        "item2": "People_pickaxe_tieri",
-        "countitem1": 23,
-        "countitem2": 1
+    {
+        "type": "miner",
+        "class": "shop",
+        "sale": ["Money"],
+        "buy": "Shild",
+        "sale_count": ["1"],
+        "buy_count": "1",
     },
-    {   
-        "type": "buy",
-        "item1": "Coin",
-        "item2": "People_axe_tieri",
-        "countitem1": 23,
-        "countitem2": 1
+    {
+        "type": "miner",
+        "class": "shop",
+        "sale": ["Money","Coin"],
+        "buy": "Arrow",
+        "sale_count": ["1","4"],
+        "buy_count": "64",
     },
-    {   
-        "type": "buy",
-        "item1": "Coin",
-        "item2": "Pickaxe_tieri",
-        "countitem1": 28,
-        "countitem2": 1
+    {
+        "type": "miner",
+        "class": "shop",
+        "sale": ["Money","Coin"],
+        "buy": "Crystal",
+        "sale_count": ["2","4"],
+        "buy_count": "5",
     },
-    {   
-        "type": "buy",
-        "item1": "Coin",
-        "item2": "Axe_tieri",
-        "countitem1": 28,
-        "countitem2": 1
+    {
+        "type": "miner",
+        "class": "shop",
+        "sale": ["Money",],
+        "buy": "Armor_tierII",
+        "sale_count": ["40"],
+        "buy_count": "1",
+    },
+    {
+        "type": "miner",
+        "class": "shop",
+        "sale": [
+            "Money",
+            "Coin"
+        ],
+        "buy": "HelmetTierII",
+        "sale_count": [
+            "10",
+            "4"
+        ],
+        "buy_count": "1",
+    },
+    {
+        "type": "miner",
+        "class": "shop",
+        "sale": ["Money"],
+        "buy": "ChestTierII",
+        "sale_count": ["17"],
+        "buy_count": "1",
+    },
+    {
+        "type": "miner",
+        "class": "shop",
+        "sale": [
+            "Money",
+            "Coin"
+        ],
+        "buy": "LeggingsTierII",
+        "sale_count": [
+            "14",
+            "7"
+        ],
+        "buy_count": "1",
+    },
+    {
+        "type": "miner",
+        "class": "shop",
+        "sale": [
+            "Money",
+            "Coin"
+        ],
+        "buy": "BootsTierII",
+        "sale_count": [
+            "10",
+            "4"
+        ],
+        "buy_count": "1",
+    },
+    {
+        "type": "miner",
+        "class": "shop",
+        "sale": ["Money"],
+        "buy": "Horse_Armor",
+        "sale_count": ["14"],
+        "buy_count": "1",
+    },
+    {
+        "type": "military",
+        "class": "shop",
+        "sale": ["Flint"],
+        "buy": "Money",
+        "sale_count": ["64"],
+        "buy_count": "1",
+    },
+    {
+        "type": "military",
+        "class": "shop",
+        "sale": ["Spider_Eye"],
+        "buy": "Money",
+        "sale_count": ["24"],
+        "buy_count": "5",
+    },
+    {
+        "type": "military",
+        "class": "shop",
+        "sale": ["Salt"],
+        "buy": "Money",
+        "sale_count": ["64"],
+        "buy_count": "3",
+    },
+    {
+        "type": "military",
+        "class": "shop",
+        "sale": ["Sugar_Cane"],
+        "buy": "Coin",
+        "sale_count": ["128"],
+        "buy_count": "1",
+    },
+    {
+        "type": "military",
+        "class": "shop",
+        "sale": ["Bone_meal"],
+        "buy": "Coin",
+        "sale_count": ["64"],
+        "buy_count": "1",
+    },
+    {
+        "type": "military",
+        "class": "shop",
+        "sale": ["Raw_salmon"],
+        "buy": "Coin",
+        "sale_count": ["64"],
+        "buy_count": "4",
+    },
+    {
+        "type": "military",
+        "class": "shop",
+        "sale": ["Raw_cod"],
+        "buy": "Coin",
+        "sale_count": ["64"],
+        "buy_count": "4",
+    },
+    {
+        "type": "other",
+        "class": "shop",
+        "sale": ["Money"],
+        "buy": "Horse",
+        "sale_count": ["75"],
+        "buy_count": "1",
+    },
+    {
+        "type": "other",
+        "class": "shop",
+        "sale": ["Money"],
+        "buy": "Stable",
+        "sale_count": ["50"],
+        "buy_count": "1",
+    },
+    {
+        "type": "other",
+        "class": "shop",
+        "sale": ["Money"],
+        "buy": "Area",
+        "sale_count": ["20"],
+        "buy_count": "1",
+    },
+    {
+        "type": "other",
+        "class": "shop",
+        "sale": ["Money"],
+        "buy": "House_Small",
+        "sale_count": ["90"],
+        "buy_count": "1",
+    },
+    {
+        "type": "other",
+        "class": "shop",
+        "sale": ["Money"],
+        "buy": "HouseT",
+        "sale_count": ["110"],
+        "buy_count": "1",
+    },
+    {
+        "type": "other",
+        "class": "shop",
+        "sale": ["Money"],
+        "buy": "HouseP",
+        "sale_count": ["100"],
+        "buy_count": "1",
     }
 ]
