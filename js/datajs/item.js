@@ -401,7 +401,7 @@ var item = {
         "lore": []
     },
     "Lapisdust": {
-        "name": "<span>Лазуритовая пыль/span>",
+        "name": "<span>Лазуритовая пыль</span>",
         "image": "./img/shopItem/lapisdust.png",
         "lore": []
     },
