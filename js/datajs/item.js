@@ -407,7 +407,7 @@ var item = {
     },
     "Ingot": {
         "name": "<span>Эльфийская сталь</span>",
-        "image": "./img/shopItem/lapisdust.png",
+        "image": "./img/shopItem/ingot.png",
         "lore": []
     },
     "HelmetTierII": {
