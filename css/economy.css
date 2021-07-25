@@ -271,3 +271,12 @@ td {
     bottom: 96%;
     opacity: 0%;
 }
+
+@media (max-width: 500px) {
+    .infobtn {
+      display: none;
+    }
+    .closebtn {
+        display: none;
+    }
+  }
