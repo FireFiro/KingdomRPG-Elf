@@ -583,7 +583,7 @@ var economy = [
         "sale": ["Salt"],
         "buy": "Money",
         "sale_count": ["64"],
-        "buy_count": "3",
+        "buy_count": "2",
     },
     {
         "type": "military",
