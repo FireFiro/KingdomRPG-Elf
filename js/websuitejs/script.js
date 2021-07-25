@@ -1,3 +1,4 @@
+feather.replace()
 $("document").ready(function () {
     $(".button_img").mouseenter(function () {
         $(this).attr('src', function (index, attr) {
@@ -112,3 +113,47 @@ function addEconomy(eco) {
     newEconomy.innerHTML = html
 document.getElementById("economylist").append(newEconomy);
 }
+
+function openInfo() {
+    document.getElementById("infobox").style.display = "block";
+    var button = anime({
+        targets: ".infobtn",
+        translateY: -780,
+        easing: 'easeInOutExpo'
+    })
+    var infobox = anime({
+        targets: ".infobox",
+        height: ['0px', '792px'],
+        opacity: ['0%', '100%'],
+        easing: 'easeInOutExpo'
+    })
+    var closebtn = anime({
+        targets: ".closebtn",
+        opacity: "100%",
+        easing: 'easeInOutExpo'
+    })
+}
+
+function closeInfo() {
+    var button = anime({
+        targets: ".infobtn",
+        translateY: 0,
+        easing: 'easeInOutExpo'
+    })
+    var infobox = anime({
+        targets: ".infobox",
+        height: ['0px', '792px'],
+        opacity: ['0%', '100%'],
+        direction: 'reverse',
+        easing: 'easeInOutExpo'
+    })
+    var closebtn = anime({
+        targets: ".closebtn",
+        opacity: "100%",
+        direction: 'reverse',
+        easing: 'easeInOutExpo'
+    })
+}
+
+$(".infobtn").click(openInfo)
+$(".closebtn").click(closeInfo)

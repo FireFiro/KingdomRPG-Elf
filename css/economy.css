@@ -222,3 +222,52 @@ body {
 .hide {
     display: none;
 }
+
+.infobtn {
+    display: block;
+    position: fixed;
+    z-index: 1001;
+    height: auto;
+    width: auto;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    text-align: center;
+    bottom: 10px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.infobox {
+    display: none;
+    position: fixed;
+    z-index: 1001;
+    height: 792px;
+    width: 600px;
+    /* background-color: rgb(255, 255, 255); */
+    margin-left: 50%;
+    transform: translate(-50%);
+    bottom: 2px;
+    opacity: 0%;
+    overflow-y: auto;
+}
+.infobox::-webkit-scrollbar {
+    width: 0px;
+}
+
+td {
+    text-align: center;
+}
+
+.closebtn {
+    display: block;
+    position: fixed;
+    z-index: 1001;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    left: 98%;
+    bottom: 96%;
+    opacity: 0%;
+}
