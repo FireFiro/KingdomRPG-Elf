@@ -1,5 +1,18 @@
 feather.replace()
 
+function sortCrafts(filterGroup) {
+    let list = document.querySelectorAll('.shop');
+    list.forEach(elem => {
+        console.log(elem.getAttribute("type"))
+        console.log(filterGroup)
+        if ((!filterGroup || elem.getAttribute("type") == filterGroup/* || elem.getAttribute("type") == "minecraft"*/ || elem.getAttribute("type") == "all")) {
+            elem.classList.remove('hide');
+        } else {
+            elem.classList.add('hide');
+        }
+});
+}
+
 document.addEventListener('mousemove', function (e) {
     hover(e);
 });
