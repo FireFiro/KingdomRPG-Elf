@@ -1,0 +1,40 @@
+body {
+    background: url(../img/shopbg.png) center 0 fixed;
+    background-size:cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.textbox {
+    background-color: white;
+    margin-top: 50px;
+    position: relative;
+    overflow: auto;
+    height: 730px;
+}
+
+.textbox::-webkit-scrollbar {
+    width: 0px;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.red {
+    color: red
+}
+
+.black {
+    color: black
+}
+
+.indent {
+    padding-left: 5px;
+}
+
+.list-group {
+    margin-top: 50px;
+}

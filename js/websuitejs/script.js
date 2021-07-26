@@ -1,29 +1,4 @@
 feather.replace()
-$("document").ready(function () {
-    $(".button_img").mouseenter(function () {
-        $(this).attr('src', function (index, attr) {
-            return attr.replace(".png", "-active.png");
-        });
-    });
-    $(".button_img").mouseleave(function () {
-        $(this).attr('src', function (index, attr) {
-            return attr.replace("-active.png", ".png");
-        });
-    });
-});
-
-function sortCrafts(filterGroup) {
-    let list = document.querySelectorAll('.shop');
-    list.forEach(elem => {
-        console.log(elem.getAttribute("type"))
-        console.log(filterGroup)
-        if ((!filterGroup || elem.getAttribute("type") == filterGroup/* || elem.getAttribute("type") == "minecraft"*/ || elem.getAttribute("type") == "all")) {
-            elem.classList.remove('hide');
-        } else {
-            elem.classList.add('hide');
-        }
-    });
-}
 
 document.addEventListener('mousemove', function (e) {
     hover(e);

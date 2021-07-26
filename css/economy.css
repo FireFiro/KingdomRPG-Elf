@@ -186,16 +186,6 @@ body {
     font-family: Minecraft;
 }
 
-.active {
-    position: absolute;
-    width: 35px;
-      height: 3px;
-    margin-top: 36px;
-    margin-left: 13px;
-    background: aqua;
-    border-radius: 20px;
-}
-
 .sort {
     background-color: #a8a8a8;
     position: absolute;
