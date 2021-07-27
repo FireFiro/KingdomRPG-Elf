@@ -1,300 +1,658 @@
 <!DOCTYPE html>
-<html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./img/logo.png" type="image/png">
     <title>Elf | Экономика</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/economy.css">
+    <link rel="stylesheet" href="./css/navbar.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<link rel="stylesheet" href="./css/economy.css">
-<link rel="stylesheet" href="./css/navbar.css">
-<link href="./css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="./css/balloon.css">
+
 <body>
-    <div class="closebtn"><i data-feather="x" color='white'></i></div>
-    <audio id="click" src="./click.mp3"></audio>
-    <!-- Navbar -->
-    <div id="nav">
-        <nav>
-            <ul>
-                <li aria-label="Доска объявлений" data-balloon-pos="down"><a href="#"><img class="button_img" src="./img/button_sign_disabled.png"></li>
-                <li aria-label="Роли" data-balloon-pos="down"><a href="role.html"><img class="button_img"  src="./img/button_role.png"></a></li>
-                <li aria-label="Экономика" data-balloon-pos="down"><div class="active"></div><a href="economy.html"><img class="button_img"  src="./img/button_shop.png"></a></li>
-                <li aria-label="Законы" data-balloon-pos="down"><a href="rule.html"><img class="button_img"  src="./img/button_rule.png"></a></li>
-                <li aria-label="Галерея" data-balloon-pos="down"><a href="gallery.html"><img class="button_img"  src="./img/button_gallery.png"></a></li>
-            </ul>
-        </nav>
-    </div>
-    <div class="sort">
-        <button class="sort_btn" onclick="sortCrafts('farmer')"><img class="button_img" src="./img/button_farmer.png"></button>
-        <button class="sort_btn" onclick="sortCrafts('miner')"><img class="button_img" src="./img/button_miner.png"></button>
-        <button class="sort_btn" onclick="sortCrafts('military')"><img class="button_img" src="./img/button_sword.png"></button>
-        <button class="sort_btn" onclick="sortCrafts('other')"><img class="button_img" src="./img/button_other.png"></button>
-        <button class="sort_btn" onclick="sortCrafts(null)"><img class="button_img" src="./img/button_none.png"></button>
-    </div>
-    <div class="scroll" id="economylist">
-    </div>
-    <div class="hoverItem" style="display: none;" id="hover">
-        lol
-    </div>
-    <footer>
-        <div class="infobtn"><i data-feather="chevron-up" color='white'></i></div>
-    </footer>
-    <div class="infobox" id="infobox">
-        <table class="table table-hover table-dark table-bordered">
-            <thead>
-              <tr>
-                <th colspan="4" style="text-align: center;">1 Купюра = 8 монеток</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">Денар - монеты</th>
-              </tr>
-              <tr>
-                <th scope="row">Миллим - купюры</th>
-              </tr>
-              <tr>
-                <th scope="row">Штрафы 10 эльфийских миллим</th>
-              </tr>
-            </tbody>
-          </table>
+  <div class="modal fade" id="updateModal" tabindex="-1" aria-labelledby="updateModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Обновления</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <span>Обновление №1:</span><br>
+            <span>+ Добавленно меню обновлений</span><br>
+            <span class="date">11.07.2021</span><br><br>
 
-        <table class="table table-hover table-dark table-bordered">
-            <thead>
-              <tr>
-                <th colspan="4" style="text-align: center;">Правила экономики</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">1. Собранную норму вы сдаёте Древнему</th>
-              </tr>
-              <tr>
-                <th scope="row">2. Ягоды, Арбузы, Медовуха в личном пользовании запрещена!</th>
-              </tr>
-              <tr>
-                <th scope="row">В противном лучае вы бужете взяты под стражу и будет выписан штраф!</th>
-              </tr>
-              <tr>
-                <th scope="row">3. Максимум можно выполнить 1 норму в день!</th>
-              </tr>
-              <tr>
-                <th scope="row">4. Вся еда будет подписываться Древним фермерства. Поэтому не подписанную еду буде изымать стража</th>
-              </tr>
-              <tr>
-                <th scope="row">5. Каждый день стража будет проверять ваши дома на запрещенные предметы</th>
-              </tr>
-              <tr>
-                <th scope="row">Вы можете только проверить наличие у стражи, одера на обыск, выданный королем, либо наместником</th>
-              </tr>
-              <tr>
-                <th scope="row">6. Для стражников в таблице есть отдельный раздел, где написанно, что вы можете сдавать на продажу в склад</th>
-              </tr>
-              <tr>
-                <th scope="row">У стражни ограничение в заработке. За день вы можете заработать 15 эльфийских миллим!</th>
-              </tr>
-              <tr>
-                <th scope="row">7. Еда для животных  будет подписана Древним по ферместву, если вы её будете брать для собственных нужд, то будете оштрафованы!</th>
-              </tr>
-              <tr>
-                <th scope="row">8. На склад вход воспрещен</th>
-              </tr>
-            </tbody>
-          </table>
+            <span>Обновление №2:</span><br>
+            <span>Было: Сахарный тростник(64) -> Монет(1)</span><br>
+            <span>Стало: Сахарный тростник(1152) -> Монет(1)</span><br>
+            <span class="date">13.07.2021</span><br><br>
 
-        <table class="table table-hover table-dark table-bordered">
-            <thead>
-              <tr>
-                <th colspan="3" style="text-align: center;">Нормы фермеров №1</th>
-                <th style="text-align: center;">В казну</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">Дуб</th>
-                <td>8</td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <th scope="row">Ель</th>
-                <td>8</td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <th scope="row">Темный дуб</th>
-                <td>3</td>
-                <td>20 Купюр</td>
-                <td>40%</td>
-              </tr>
-              <tr>
-                <th scope="row">Береза</th>
-                <td>3</td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <th scope="row">Акация</th>
-                <td>3</td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <th scope="row">Тропики</th>
-                <td>3</td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <th scope="row" colspan="4" style="text-align: center;">Один раз в три дня (Вт,Пт,Пн,Чт,Вс и т.д)</th>
-              </tr>
-            </tbody>
-          </table>
+            <span>Обновление №3:</span><br>
+            <span>Сахарный тростник теперь может продавать только стража</span><br>
+            <span>Было: Нитки(24) -> Монет(1)</span><br>
+            <span>Стало: Нитки(64) -> Монет(1)</span><br>
+            <span class="date">14.07.2021</span><br><br>
 
-          <table class="table table-hover table-dark table-bordered">
-            <thead>
-              <tr>
-                <th colspan="3" style="text-align: center;">Нормы фермеров №2</th>
-                <th style="text-align: center;">В казну</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">Пшеница</th>
-                <td>1152</td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <th scope="row">Кролик</th>
-                <td>192</td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <th scope="row">Барашек</th>
-                <td>128</td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <th scope="row">Курочка</th>
-                <td>128</td>
-                <td>25 Купюр</td>
-                <td>40%</td>
-              </tr>
-              <tr>
-                <th scope="row">Перья</th>
-                <td>96</td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <th scope="row">Яйца</th>
-                <td>48</td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <th scope="row">Шерсть</th>
-                <td>128</td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <th scope="row">Кожа кроликов</th>
-                <td>128</td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <th scope="row" colspan="4" style="text-align: center;">Один раз в неделю (Вс)</th>
-              </tr>
-            </tbody>
-          </table>
+            <span>Обновление №4:</span><br>
+            <span>Добавлены скрины с ивента "Медовый Фестиваль"</span><br>
+            <span class="date">15.07.2021</span><br><br>
 
-          <table class="table table-hover table-dark table-bordered">
-            <thead>
-              <tr>
-                <th colspan="3" style="text-align: center;">Нормы Шахтеров</th>
-                <th style="text-align: center;">В казну</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">Гравий</th>
-                <td>64</td>
-                <td></td>
-                <td class="table-secondary">60%</td>
-              </tr>
-              <tr>
-                <th scope="row">Булыжник</th>
-                <td>256</td>
-                <td></td>
-                <td class="table-secondary"></td>
-              </tr>
-              <tr>
-                <th scope="row">Гранит</th>
-                <td>32</td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <th scope="row">Диорит</th>
-                <td>32</td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <th scope="row">Андезит</th>
-                <td>32</td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <th scope="row">Уголь</th>
-                <td>64</td>
-                <td>25 Купюр</td>
-                <td>40%</td>
-              </tr>
-              <tr>
-                <th scope="row">Железные нагетсы</th>
-                <td>64</td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <th scope="row">Лазурит</th>
-                <td>16</td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <th scope="row">Кварц</th>
-                <td>32</td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <th scope="row">Золотые нагетсы</th>
-                <td>32</td>
-                <td></td>
-                <td></td>
-              </tr>
-            </tbody>
-          </table>
+            <span>Обновление №5:</span><br>
+            <span>Полное обновление экономики</span><br>
+            <span class="date">25.07.2021</span><br><br>
+
+            <span>Обновление №6:</span><br>
+            <span>В разделе экономика добавленна кнопка для просмотра правил экономики и норм</span><br>
+            <span>Данная функция сделанна только для ПК</span><br>
+            <span>Было:</span><br>
+            <span>Соль (64) -> Купюр (3)</span><br>
+            <span>Стало:</span><br>
+            <span>Соль (64) -> Купюр (2)</span><br>
+            <span class="date">25.07.2021</span><br><br>
+
+            <span>Обновление №7:</span><br>
+            <span>Переписан внешний вид сайта</span><br>
+            <span class="date">28.07.2021</span><br>
+        </div>
+      </div>
     </div>
+</div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <table class="table table-hover table-dark table-bordered">
+                    <thead>
+                        <tr>
+                            <th colspan="4" style="text-align: center;">1 Купюра = 8 монеток</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Денар - монеты</th>
+                        </tr>
+                        <tr>
+                            <th scope="row">Миллим - купюры</th>
+                        </tr>
+                        <tr>
+                            <th scope="row">Штрафы 10 эльфийских миллим</th>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table class="table table-hover table-dark table-bordered">
+                    <thead>
+                        <tr>
+                            <th colspan="4" style="text-align: center;">Правила экономики</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1. Собранную норму вы сдаёте Древнему</th>
+                        </tr>
+                        <tr>
+                            <th scope="row">2. Ягоды, Арбузы, Медовуха в личном пользовании запрещена!</th>
+                        </tr>
+                        <tr>
+                            <th scope="row">В противном лучае вы бужете взяты под стражу и будет выписан штраф!</th>
+                        </tr>
+                        <tr>
+                            <th scope="row">3. Максимум можно выполнить 1 норму в день!</th>
+                        </tr>
+                        <tr>
+                            <th scope="row">4. Вся еда будет подписываться Древним фермерства. Поэтому не подписанную еду буде изымать
+                                стража</th>
+                        </tr>
+                        <tr>
+                            <th scope="row">5. Каждый день стража будет проверять ваши дома на запрещенные предметы</th>
+                        </tr>
+                        <tr>
+                            <th scope="row">Вы можете только проверить наличие у стражи, одера на обыск, выданный королем, либо
+                                наместником</th>
+                        </tr>
+                        <tr>
+                            <th scope="row">6. Для стражников в таблице есть отдельный раздел, где написанно, что вы можете сдавать на
+                                продажу в склад</th>
+                        </tr>
+                        <tr>
+                            <th scope="row">У стражни ограничение в заработке. За день вы можете заработать 15 эльфийских миллим!</th>
+                        </tr>
+                        <tr>
+                            <th scope="row">7. Еда для животных будет подписана Древним по ферместву, если вы её будете брать для
+                                собственных нужд, то будете оштрафованы!</th>
+                        </tr>
+                        <tr>
+                            <th scope="row">8. На склад вход воспрещен</th>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table class="table table-hover table-dark table-bordered">
+                    <thead>
+                      <tr>
+                        <th colspan="3" style="text-align: center;">Нормы фермеров №1</th>
+                        <th style="text-align: center;">В казну</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">Дуб</th>
+                        <td>8</td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Ель</th>
+                        <td>8</td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Темный дуб</th>
+                        <td>3</td>
+                        <td>20 Купюр</td>
+                        <td>40%</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Береза</th>
+                        <td>3</td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Акация</th>
+                        <td>3</td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Тропики</th>
+                        <td>3</td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <th scope="row" colspan="4" style="text-align: center;">Один раз в три дня (Вт,Пт,Пн,Чт,Вс и т.д)</th>
+                      </tr>
+                    </tbody>
+                  </table>
+        
+                  <table class="table table-hover table-dark table-bordered">
+                    <thead>
+                      <tr>
+                        <th colspan="3" style="text-align: center;">Нормы фермеров №2</th>
+                        <th style="text-align: center;">В казну</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">Пшеница</th>
+                        <td>1152</td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Кролик</th>
+                        <td>192</td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Барашек</th>
+                        <td>128</td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Курочка</th>
+                        <td>128</td>
+                        <td>25 Купюр</td>
+                        <td>40%</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Перья</th>
+                        <td>96</td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Яйца</th>
+                        <td>48</td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Шерсть</th>
+                        <td>128</td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Кожа кроликов</th>
+                        <td>128</td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <th scope="row" colspan="4" style="text-align: center;">Один раз в неделю (Вс)</th>
+                      </tr>
+                    </tbody>
+                  </table>
+        
+                  <table class="table table-hover table-dark table-bordered">
+                    <thead>
+                      <tr>
+                        <th colspan="3" style="text-align: center;">Нормы Шахтеров</th>
+                        <th style="text-align: center;">В казну</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">Гравий</th>
+                        <td>64</td>
+                        <td></td>
+                        <td class="table-secondary">60%</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Булыжник</th>
+                        <td>256</td>
+                        <td></td>
+                        <td class="table-secondary"></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Гранит</th>
+                        <td>32</td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Диорит</th>
+                        <td>32</td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Андезит</th>
+                        <td>32</td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Уголь</th>
+                        <td>64</td>
+                        <td>25 Купюр</td>
+                        <td>40%</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Железные нагетсы</th>
+                        <td>64</td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Лазурит</th>
+                        <td>16</td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Кварц</th>
+                        <td>32</td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Золотые нагетсы</th>
+                        <td>32</td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="sidebar" id="side">
+      <div class="logo-details">
+        <i class='icon'><img src="./img/navbar/logo.png" alt=""></i>
+        <div class="logo_name">Эльфийское Сокровище</div>
+        <i class='bx bx-menu' id="btn"></i>
+      </div>
+      <ul class="nav-lists">
+        <li>
+          <a href="role.html">
+            <i class='bx bxs-book'></i>
+            <span class="links_name">Роли</span>
+          </a>
+          <span class="tooltip">Роли</span>
+        </li>
+        <li>
+          <a href="economy.html">
+            <i class='bx bx-money'></i>
+            <span class="links_name">Экономика</span>
+          </a>
+          <span class="tooltip">Экономика</span>
+        </li>
+        <li>
+          <a href="rule.html" class="img">
+            <i><img class="icons" src="./img/navbar/scroll.png"></i>
+            <span class="links_name">Законы</span>
+          </a>
+          <span class="tooltip">Законы</span>
+        </li>
+        <li>
+          <a href="gallery.html">
+            <i class='bx bx-image'></i>
+            <span class="links_name">Галерея</span>
+          </a>
+          <span class="tooltip">Галерея</span>
+        </li>
+        <li>
+          <a href="#" data-bs-toggle="modal" data-bs-target="#updateModal">
+            <i class='bx bx-clipboard'></i>
+            <span class="links_name">Обновления</span>
+          </a>
+          <span class="tooltip">Обновления</span>
+        </li>
+        <li class="profile">
+          <div class="profile-details">
+            <img class="profileIMG" src="./img/navbar/avatar.gif" alt="profileImg">
+            <div class="name_job">
+              <div class="name">_FireFiro_</div>
+              <div class="job">The Creator</div>
+            </div>
+          </div>
+          <i id="log_out"></i>
+        </li>
+      </ul>
+    </div>
+    <section class="home-section">
+        <div>
+            <div class="scroll" id="economylist">
+            </div>
+            <div class="hoverItem" style="display: none;" id="hover">
+                lol
+            </div>
+            <div class="sort">
+                <button class="sort_btn" onclick="sortCrafts('farmer')"><img class="button_img" src="./img/shopButton/button_farmer.png"></button>
+                <button class="sort_btn" onclick="sortCrafts('miner')"><img class="button_img" src="./img/shopButton/button_miner.png"></button>
+                <button class="sort_btn" onclick="sortCrafts('military')"><img class="button_img" src="./img/shopButton/button_sword.png"></button>
+                <button class="sort_btn" onclick="sortCrafts('other')"><img class="button_img" src="./img/shopButton/button_other.png"></button>
+                <button class="sort_btn" onclick="sortCrafts(null)"><img class="button_img" src="./img/shopButton/button_none.png"></button>
+            </div>
+            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              <i class='bx bx-chevron-right'></i>
+            </button>
+            <div class="closebutton">
+              <i class='bx bx-x'></i>
+            </div>
+            <div class="slidebutton">
+              <i class='bx bx-chevron-right'></i>
+            </div>
+            <div class="infobox" id="infobox">
+                <table class="table table-hover table-dark table-bordered">
+                    <thead>
+                      <tr>
+                        <th colspan="4" style="text-align: center;">1 Купюра = 8 монеток</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">Денар - монеты</th>
+                      </tr>
+                      <tr>
+                        <th scope="row">Миллим - купюры</th>
+                      </tr>
+                      <tr>
+                        <th scope="row">Штрафы 10 эльфийских миллим</th>
+                      </tr>
+                    </tbody>
+                  </table>
+        
+                <table class="table table-hover table-dark table-bordered">
+                    <thead>
+                      <tr>
+                        <th colspan="4" style="text-align: center;">Правила экономики</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1. Собранную норму вы сдаёте Древнему</th>
+                      </tr>
+                      <tr>
+                        <th scope="row">2. Ягоды, Арбузы, Медовуха в личном пользовании запрещена!</th>
+                      </tr>
+                      <tr>
+                        <th scope="row">В противном лучае вы бужете взяты под стражу и будет выписан штраф!</th>
+                      </tr>
+                      <tr>
+                        <th scope="row">3. Максимум можно выполнить 1 норму в день!</th>
+                      </tr>
+                      <tr>
+                        <th scope="row">4. Вся еда будет подписываться Древним фермерства. Поэтому не подписанную еду буде изымать стража</th>
+                      </tr>
+                      <tr>
+                        <th scope="row">5. Каждый день стража будет проверять ваши дома на запрещенные предметы</th>
+                      </tr>
+                      <tr>
+                        <th scope="row">Вы можете только проверить наличие у стражи, одера на обыск, выданный королем, либо наместником</th>
+                      </tr>
+                      <tr>
+                        <th scope="row">6. Для стражников в таблице есть отдельный раздел, где написанно, что вы можете сдавать на продажу в склад</th>
+                      </tr>
+                      <tr>
+                        <th scope="row">У стражни ограничение в заработке. За день вы можете заработать 15 эльфийских миллим!</th>
+                      </tr>
+                      <tr>
+                        <th scope="row">7. Еда для животных  будет подписана Древним по ферместву, если вы её будете брать для собственных нужд, то будете оштрафованы!</th>
+                      </tr>
+                      <tr>
+                        <th scope="row">8. На склад вход воспрещен</th>
+                      </tr>
+                    </tbody>
+                  </table>
+        
+                <table class="table table-hover table-dark table-bordered">
+                    <thead>
+                      <tr>
+                        <th colspan="3" style="text-align: center;">Нормы фермеров №1</th>
+                        <th style="text-align: center;">В казну</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">Дуб</th>
+                        <td>8</td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Ель</th>
+                        <td>8</td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Темный дуб</th>
+                        <td>3</td>
+                        <td>20 Купюр</td>
+                        <td>40%</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Береза</th>
+                        <td>3</td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Акация</th>
+                        <td>3</td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Тропики</th>
+                        <td>3</td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <th scope="row" colspan="4" style="text-align: center;">Один раз в три дня (Вт,Пт,Пн,Чт,Вс и т.д)</th>
+                      </tr>
+                    </tbody>
+                  </table>
+        
+                  <table class="table table-hover table-dark table-bordered">
+                    <thead>
+                      <tr>
+                        <th colspan="3" style="text-align: center;">Нормы фермеров №2</th>
+                        <th style="text-align: center;">В казну</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">Пшеница</th>
+                        <td>1152</td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Кролик</th>
+                        <td>192</td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Барашек</th>
+                        <td>128</td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Курочка</th>
+                        <td>128</td>
+                        <td>25 Купюр</td>
+                        <td>40%</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Перья</th>
+                        <td>96</td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Яйца</th>
+                        <td>48</td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Шерсть</th>
+                        <td>128</td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Кожа кроликов</th>
+                        <td>128</td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <th scope="row" colspan="4" style="text-align: center;">Один раз в неделю (Вс)</th>
+                      </tr>
+                    </tbody>
+                  </table>
+        
+                  <table class="table table-hover table-dark table-bordered">
+                    <thead>
+                      <tr>
+                        <th colspan="3" style="text-align: center;">Нормы Шахтеров</th>
+                        <th style="text-align: center;">В казну</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">Гравий</th>
+                        <td>64</td>
+                        <td></td>
+                        <td class="table-secondary">60%</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Булыжник</th>
+                        <td>256</td>
+                        <td></td>
+                        <td class="table-secondary"></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Гранит</th>
+                        <td>32</td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Диорит</th>
+                        <td>32</td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Андезит</th>
+                        <td>32</td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Уголь</th>
+                        <td>64</td>
+                        <td>25 Купюр</td>
+                        <td>40%</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Железные нагетсы</th>
+                        <td>64</td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Лазурит</th>
+                        <td>16</td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Кварц</th>
+                        <td>32</td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Золотые нагетсы</th>
+                        <td>32</td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <script src="./script/Data/item.js"></script>
+    <script src="./script/Data/eco.js"></script>
+    <script src="./script/Code/bootstrap.bundle.min.js"></script>
+    <script src="./script/Code/jQuery.js"></script>
+    <script src="./script/Code/anime.min.js"></script>
+    <script src="./script/WebSuite/navbar.js"></script>
+    <script src="./script/WebSuite/economy.js"></script>
+
 </body>
-<!-- <script src="./js/bootstrap.bundle.min.js"></script> -->
-<script src='https://unpkg.com/feather-icons'></script>
-<script src="./js/visualjs/jQuery.js"></script>
-<script src="./js/visualjs/anime.min.js"></script>
-<script src="./js/datajs/item.js"></script>
-<script src="./js/datajs/eco.js"></script>
-<script src="./js/websuitejs/script.js"></script>
-<script src="./js/websuitejs/navbar.js"></script>
+
 </html>

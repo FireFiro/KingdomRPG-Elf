@@ -1,108 +1,108 @@
+.home-section {
+    background-image: url(../img/bg.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    user-select: none; 
+    overflow: hidden;
+}
+
 * {
-  box-sizing: border-box;
-  margin: 0;
+    box-sizing: border-box;
+    margin: 0;
 }
 
-body{
-  background-image: url(../img/shopbg.png);
-  background-size:cover;
-  background-repeat: no-repeat;
-  user-select: none; 
-  overflow-y: hidden;
-}
-
-section {
-  margin: -20px 150px;
-}
-
-.container {
-  max-width: 1000px; 
-  position: relative;
-  padding: 5px;
-  background: #fff;
-  margin: 15px auto;
-  margin-top: 70px;
-  box-shadow: 0 15px 35px -15px #656565;
-  border-radius: 1rem;
-}
-
-.slider { 
-  margin: 0 auto; 
-  width: 100%; 
-  height: 100%;
-  border-radius: 0.7rem;
-  display: flex; 
-  overflow: hidden; 
-  scroll-behavior: smooth;
-} 
-
-img { 
-  min-width: 100%; 
-  max-width: 100%; 
-  height: auto; 
-  /* object-fit: contain; */
-  border-radius: 0.7rem;
+.gallery {
+    margin: -20px 150px;
 }
   
-#previous, #next { 
-  cursor: pointer; 
-  position: absolute; 
-  width: 50px; 
-  height: 50px; 
-  border-radius: 16px; 
-  background: #2770ff;
-  color: #fff;
-  display: flex; 
-  align-items: center; 
-  justify-content: center; 
-  top: calc(50% - 25px); 
-  left: -20px;
-  box-shadow: 0 12px 25px -9px #0041ac;
-} 
-
-#next { 
-  left: unset; 
-  right: -20px; 
+.container {
+    max-width: 1000px; 
+    position: relative;
+    padding: 5px;
+    background: #fff;
+    margin: 15px auto;
+    margin-top: 70px;
+    box-shadow: 0 15px 35px -15px #656565;
+    border-radius: 1rem;
 }
-
+  
+.slider { 
+    margin: 0 auto; 
+    width: 100%; 
+    height: 100%;
+    border-radius: 0.7rem;
+    display: flex; 
+    overflow: hidden; 
+    scroll-behavior: smooth;
+} 
+  
+.image { 
+    min-width: 100%; 
+    max-width: 100%; 
+    /* height: auto;  */
+    /* object-fit: contain; */
+    border-radius: 0.7rem;
+}
+    
+#previous, #next { 
+    cursor: pointer; 
+    position: absolute; 
+    width: 50px; 
+    height: 50px; 
+    border-radius: 16px; 
+    background: #2770ff;
+    color: #fff;
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    top: calc(50% - 25px); 
+    left: -20px;
+    box-shadow: 0 12px 25px -9px #0041ac;
+} 
+  
+#next { 
+    left: unset; 
+    right: -20px; 
+}
+  
 @media (max-width: 480px){
-  #previous, #next { 
+#previous, #next { 
     width: 40px; 
     height: 40px; 
     border-radius: 10px;
     top: calc(50% - 20px);
-  } 
+    } 
 }
-
-@media (min-width: 1200px){
-  #previous, #next { 
-    width: 60px; 
-    height: 60px; 
-    border-radius: 18px;
-    top: calc(50% - 30px);
-    left: -30px;
-  }
   
-  #next { 
-    left: unset; 
-    right: -30px; 
-  }
+@media (min-width: 1200px){
+    #previous, #next { 
+        width: 60px; 
+        height: 60px; 
+        border-radius: 18px;
+        top: calc(50% - 30px);
+        left: -30px;
+    }
+    
+    #next { 
+        left: unset; 
+        right: -30px; 
+    }
 }
-
+  
 .hoverItem{
-  border-width: 4px;
-  border-style: solid;
-  background-color: rgba(17, 2, 1);
-  opacity: 0.85;
-  border-image: url("../img/hover.png") 4 4 4 4;
-  border-radius: 7px;
-  position: absolute;
-  z-index: 10;
-  font-family: Minecraft;
+    border-width: 4px;
+    border-style: solid;
+    background-color: rgba(17, 2, 1);
+    opacity: 0.85;
+    border-image: url("../img/hover.png") 4 4 4 4;
+    border-radius: 7px;
+    position: absolute;
+    z-index: 10;
+    font-family: Minecraft;
 }
-
+  
 .hoverItem p{
-  margin: 0;
-  z-index: -1;
-  color: white;
+    margin: 0;
+    z-index: -1;
+    color: white;
 }

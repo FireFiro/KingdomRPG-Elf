@@ -1,116 +1,144 @@
 <!DOCTYPE html>
-<html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./img/logo.png" type="image/png">
-    <title>Elf | Законы</title>
+    <title>Elf | Роли</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/rule.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<link rel="stylesheet" href="./css/rule.css">
-<link rel="stylesheet" href="./css/navbar.css">
-<link href="./css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="./css/balloon.css">
+
 <body>
-    <audio id="click" src="./click.mp3"></audio>
-    <!-- Navbar -->
-    <div id="nav">
-        <nav>
-            <ul>
-                <li aria-label="Доска объявлений" data-balloon-pos="down"><a href="#"><img class="button_img" src="./img/button_sign_disabled.png"></li>
-                <li aria-label="Роли" data-balloon-pos="down"><a href="role.html"><img class="button_img"  src="./img/button_role.png"></a></li>
-                <li aria-label="Экономика" data-balloon-pos="down"><a href="economy.html"><img class="button_img"  src="./img/button_shop.png"></a></li>
-                <li aria-label="Законы" data-balloon-pos="down"><div class="active"></div><a href="rule.html"><img class="button_img"  src="./img/button_rule.png"></a></li>
-                <li aria-label="Галерея" data-balloon-pos="down"><a href="gallery.html"><img class="button_img"  src="./img/button_gallery.png"></a></li>
-            </ul>
-        </nav>
+    <div class="sidebar">
+        <div class="logo-details">
+            <i class='icon'><img src="./img/navbar/logo.png" alt=""></i>
+            <div class="logo_name">Эльфийское Сокровище</div>
+            <i class='bx bx-menu' id="btn"></i>
+        </div>
+        <ul class="nav-lists">
+            <li>
+                <a href="role.html">
+                    <i class='bx bxs-book'></i>
+                    <span class="links_name">Роли</span>
+                </a>
+                <span class="tooltip">Роли</span>
+            </li>
+            <li>
+                <a href="economy.html">
+                    <i class='bx bx-money'></i>
+                    <span class="links_name">Экономика</span>
+                </a>
+                <span class="tooltip">Экономика</span>
+            </li>
+            <li>
+                <a href="rule.html" class="img">
+                    <i><img class="icons" src="./img/navbar/scroll.png"></i>
+                    <span class="links_name">Законы</span>
+                </a>
+                <span class="tooltip">Законы</span>
+            </li>
+            <li>
+                <a href="gallery.html">
+                    <i class='bx bx-image'></i>
+                    <span class="links_name">Галерея</span>
+                </a>
+                <span class="tooltip">Галерея</span>
+            </li>
+            <li>
+                <a href="#">
+                  <i class='bx bx-clipboard'></i>
+                  <span class="links_name">Обновления</span>
+                </a>
+                <span class="tooltip">Обновления</span>
+              </li>
+            <li class="profile">
+                <div class="profile-details">
+                    <img class="profileIMG" src="./img/navbar/avatar.gif" alt="profileImg">
+                    <div class="name_job">
+                        <div class="name">_FireFiro_</div>
+                        <div class="job">The Creator</div>
+                    </div>
+                </div>
+                <i id="log_out"></i>
+            </li>
+        </ul>
     </div>
-    <div class="row">
-        <div class="col-3">
-            <div id="list-example" class="list-group">
-                <a class="list-group-item list-group-item-action" href="#item-1">Основные законы</a>
-                <a class="list-group-item list-group-item-action" href="#item-2">Законы об имуществе</a>
-                <a class="list-group-item list-group-item-action" href="#item-3">Судопроизводство</a>
-                <a class="list-group-item list-group-item-action" href="#item-4">Примечания</a>
+    <section class="home-section">
+        <div class="row">
+            <div class="col-3">
+                <div id="list-example" class="list-group">
+                    <a class="list-group-item list-group-item-action" href="#item-1">Основные законы</a>
+                    <a class="list-group-item list-group-item-action" href="#item-2">Законы об имуществе</a>
+                    <a class="list-group-item list-group-item-action" href="#item-3">Судопроизводство</a>
+                    <a class="list-group-item list-group-item-action" href="#item-4">Примечания</a>
+                </div>
+            </div>
+            <div class="col-9">
+                <div data-spy="scroll" data-target="#list-example" data-offset="0" class="scrollspy-example textbox">
+                    <h3 class="center">Свод законов Королевства эльфов</h3>
+                    <span class="indent">Королевство эльфов — суверенное унитарное государство с монархической формой правления.</span><br>
+                    <span class="indent">Источником власти в Королевстве эльфов является нынешний правитель — монарх.</span>
+                    <h4 class="center" id="item-1">1. Основные законы</h4>
+                    <span class="indent">Запрещается: </span><br>
+                    <span class="indent">1.1 Нарушать общественный порядок.</span><br>
+                    <span class="indent red">Наказание: <span class="black">от 1 до 3 монет или от 1 до 3 дней заключения.</span></span><br>
+                    <span class="indent">1.2 Пересекать границы государства без  согласования с уполномоченными государственными служащими.</span><br>
+                    <span class="indent red">Наказание: <span class="black">от 2 до 3 монет или от 2 до 3 дней заключения.</span></span><br>
+                    <span class="indent">1.3 Портить государственное и частное имущество.</span><br>
+                    <span class="indent red">Наказание: <span class="black">от 2 монет.</span></span><br>
+                    <span class="indent">1.4 Не подчиняться уполномоченным государственным служащим.</span><br>
+                    <span class="indent red">Наказание: <span class="black">от 1 до 2 монет или от 1 до 2 дней заключения.</span></span><br>
+                    <span class="indent">1.5 Находиться на охраняемой государством территории без согласования с уполномоченными государственными служащими.</span><br>
+                    <span class="indent red">Наказание: <span class="black">от 3 дней заключения или казнь.</span></span><br>
+                    <span class="indent">1.6 Причинять тяжелые увечья жителям государства или его гостям.</span><br>
+                    <span class="indent red">Наказание: <span class="black">от 1 монеты и/или от 1 до 4 дней заключения.</span></span><br>
+                    <span class="indent">1.7 Нападать на стражу или на других государственных служащих.</span><br>
+                    <span class="indent red">Наказание: <span class="black">от 1 до 2 дней заключения.</span></span><br>
+                    <span class="indent">1.8 Покушаться на жизнь нынешнего правителя.</span><br>
+                    <span class="indent red">Наказание: <span class="black">от 3 дней заключения или казнь.</span></span><br>
+                    <span class="indent">1.9 Противодействовать исполнению судебного приговора.</span><br>
+                    <span class="indent red">Наказание: <span class="black">ужесточение судебного приговора или казнь.</span></span><br>
+                    <span class="indent">1.10 Противодействовать политике государства и решениям нынешнего правителя.</span><br>
+                    <span class="indent red">Наказание: <span class="black">от 1 дня заключения или казнь.</span></span><br>
+                    <span class="indent">1.11 Собираться на акциях протеста без согласования с уполномоченными государственными служащими.</span><br>
+                    <span class="indent red">Наказание: <span class="black">от 1 до 2 монет или от 1 до 2 дней заключения.</span></span><br>
+                    <span class="indent">1.12 Организовывать акции протеста без согласования с уполномоченными государственными служащими.</span><br>
+                    <span class="indent red">Наказание: <span class="black">от 3 дней заключения или казнь.</span></span><br>
+                    <span class="indent">1.13 Торговать без согласования с уполномоченными государственными служащими.</span><br>
+                    <span class="indent red">Наказание: <span class="black">от 1 монеты и/или от 1-го дня заключения.</span></span><br>
+                    <span class="indent">1.14 Сговариваться с людьми из других государств без согласования с уполномоченными государственными служащими.</span><br>
+                    <span class="indent red">Наказание: <span class="black">от 4 дней заключения или казнь.</span></span><br>
+                    <span class="indent">1.15 Передавать информацию о королевстве посторонним без согласования с уполномоченными государственными служащими.</span><br>
+                    <span class="indent red">Наказание: <span class="black">от 3 дней заключения или казнь.</span></span><br>
+                    <h4 class="center" id="item-2">2. Законы об имуществе</h4>
+                    <span class="indent">Гвардия и уполномоченные государственные служащие могут проводить обыск без предупреждения.</span><br>
+                    <span class="indent">2.1 Любое имущество жителей Королевства эльфов, может быть изъято в пользу Королевства без согласования с владельцем.</span><br>
+                    <span class="indent">2.2 Запрещено строительство без согласования с уполномоченными государственными служащими.</span><br>
+                    <span class="indent">2.3 Наличие чрезмерного количества ресурсов, преследуется законом.</span><br>
+                    <h4 class="center" id="item-3">3. Судопроизводство</h4>
+                    <span class="indent">3.1 Житель Королевства эльфов имеет право на защиту собственных интересов и свобод в суде.</span><br>
+                    <span class="indent">3.2 Житель Королевства эльфов имеет право на подачу апелляции на дело (до двух раз), тогда приговор будет отложен до следующего суда.</span><br>
+                    <span class="indent">3.3 Окончательное решение при судопроизводстве выносит судья, его слово имеет наибольшую силу при разборе дела, его обязанности могут выполнять только уполномоченные нынешним правителем лица.</span><br>
+                    <span class="indent">3.4 Судья, при отсутствии решения в своде законов, может опираться на мнение присяжных при вынесении решения.</span><br>
+                    <h4 class="center" id="item-4">4. Примечания</h4>
+                    <span class="indent">4.1 Незнание законов государства не освобождает вас от ответственности.</span><br>
+                    <span class="indent">4.2 Каждый, кто находиться на территории Королевства эльфов обязан следовать законам государства.</span><br>
+                    <span class="indent">4.3 Свод законов может изменяться и дополняться со временем.</span><br>
+                    <span class="indent">4.4 Государство рассчитывает на логически обоснованное и морально правильное поведение своих жителей.</span><br>
+                </div>
             </div>
         </div>
-        <div class="col-9">
-            <div data-spy="scroll" data-target="#list-example" data-offset="0" class="scrollspy-example textbox">
-                <h3 class="center">Свод законов Королевства эльфов</h3>
-                <span class="indent">Королевство эльфов — суверенное унитарное государство с монархической формой правления.</span><br>
-                <span class="indent">Источником власти в Королевстве эльфов является нынешний правитель — монарх.</span>
-                <h4 class="center" id="item-1">1. Основные законы</h4>
-                <span class="indent">Запрещается: </span><br>
-                <span class="indent">1.1 Нарушать общественный порядок.</span><br>
-                <span class="indent red">Наказание: <span class="black">от 1 до 3 монет или от 1 до 3 дней заключения.</span></span><br>
-                <span class="indent">1.2 Пересекать границы государства без  согласования с уполномоченными государственными служащими.</span><br>
-                <span class="indent red">Наказание: <span class="black">от 2 до 3 монет или от 2 до 3 дней заключения.</span></span><br>
-                <span class="indent">1.3 Портить государственное и частное имущество.</span><br>
-                <span class="indent red">Наказание: <span class="black">от 2 монет.</span></span><br>
-                <span class="indent">1.4 Не подчиняться уполномоченным государственным служащим.</span><br>
-                <span class="indent red">Наказание: <span class="black">от 1 до 2 монет или от 1 до 2 дней заключения.</span></span><br>
-                <span class="indent">1.5 Находиться на охраняемой государством территории без согласования с уполномоченными государственными служащими.</span><br>
-                <span class="indent red">Наказание: <span class="black">от 3 дней заключения или казнь.</span></span><br>
-                <span class="indent">1.6 Причинять тяжелые увечья жителям государства или его гостям.</span><br>
-                <span class="indent red">Наказание: <span class="black">от 1 монеты и/или от 1 до 4 дней заключения.</span></span><br>
-                <span class="indent">1.7 Нападать на стражу или на других государственных служащих.</span><br>
-                <span class="indent red">Наказание: <span class="black">от 1 до 2 дней заключения.</span></span><br>
-                <span class="indent">1.8 Покушаться на жизнь нынешнего правителя.</span><br>
-                <span class="indent red">Наказание: <span class="black">от 3 дней заключения или казнь.</span></span><br>
-                <span class="indent">1.9 Противодействовать исполнению судебного приговора.</span><br>
-                <span class="indent red">Наказание: <span class="black">ужесточение судебного приговора или казнь.</span></span><br>
-                <span class="indent">1.10 Противодействовать политике государства и решениям нынешнего правителя.</span><br>
-                <span class="indent red">Наказание: <span class="black">от 1 дня заключения или казнь.</span></span><br>
-                <span class="indent">1.11 Собираться на акциях протеста без согласования с уполномоченными государственными служащими.</span><br>
-                <span class="indent red">Наказание: <span class="black">от 1 до 2 монет или от 1 до 2 дней заключения.</span></span><br>
-                <span class="indent">1.12 Организовывать акции протеста без согласования с уполномоченными государственными служащими.</span><br>
-                <span class="indent red">Наказание: <span class="black">от 3 дней заключения или казнь.</span></span><br>
-                <span class="indent">1.13 Торговать без согласования с уполномоченными государственными служащими.</span><br>
-                <span class="indent red">Наказание: <span class="black">от 1 монеты и/или от 1-го дня заключения.</span></span><br>
-                <span class="indent">1.14 Сговариваться с людьми из других государств без согласования с уполномоченными государственными служащими.</span><br>
-                <span class="indent red">Наказание: <span class="black">от 4 дней заключения или казнь.</span></span><br>
-                <span class="indent">1.15 Передавать информацию о королевстве посторонним без согласования с уполномоченными государственными служащими.</span><br>
-                <span class="indent red">Наказание: <span class="black">от 3 дней заключения или казнь.</span></span><br>
-                <h4 class="center" id="item-2">2. Законы об имуществе</h4>
-                <span class="indent">Гвардия и уполномоченные государственные служащие могут проводить обыск без предупреждения.</span><br>
-                <span class="indent">2.1 Любое имущество жителей Королевства эльфов, может быть изъято в пользу Королевства без согласования с владельцем.</span><br>
-                <span class="indent">2.2 Запрещено строительство без согласования с уполномоченными государственными служащими.</span><br>
-                <span class="indent">2.3 Наличие чрезмерного количества ресурсов, преследуется законом.</span><br>
-                <h4 class="center" id="item-3">3. Судопроизводство</h4>
-                <span class="indent">3.1 Житель Королевства эльфов имеет право на защиту собственных интересов и свобод в суде.</span><br>
-                <span class="indent">3.2 Житель Королевства эльфов имеет право на подачу апелляции на дело (до двух раз), тогда приговор будет отложен до следующего суда.</span><br>
-                <span class="indent">3.3 Окончательное решение при судопроизводстве выносит судья, его слово имеет наибольшую силу при разборе дела, его обязанности могут выполнять только уполномоченные нынешним правителем лица.</span><br>
-                <span class="indent">3.4 Судья, при отсутствии решения в своде законов, может опираться на мнение присяжных при вынесении решения.</span><br>
-                <h4 class="center" id="item-4">4. Примечания</h4>
-                <span class="indent">4.1 Незнание законов государства не освобождает вас от ответственности.</span><br>
-                <span class="indent">4.2 Каждый, кто находиться на территории Королевства эльфов обязан следовать законам государства.</span><br>
-                <span class="indent">4.3 Свод законов может изменяться и дополняться со временем.</span><br>
-                <span class="indent">4.4 Государство рассчитывает на логически обоснованное и морально правильное поведение своих жителей.</span><br>
-            </div>
-        </div>
-    </div>
-    <!-- <div id="list-example" class="list-group">
-        <a class="list-group-item list-group-item-action" href="#list-item-1">Item 1</a>
-        <a class="list-group-item list-group-item-action" href="#list-item-2">Item2</a>
-        <a class="list-group-item list-group-item-action" href="#list-item-3">Item 3</a>
-        <a class="list-group-item list-group-item-action" href="#list-item-4">Item 4</a>
-      </div>
-      <div data-spy="scroll" data-target="#list-example" data-offset="0" class="scrollspy-example">
-        <h4 id="list-item-1">Item 1</h4>
-        <p>...</p>
-        <h4 id="list-item-2">Item 2</h4>
-        <p>...</p>
-        <h4 id="list-item-3">Item 3</h4>
-        <p>...</p>
-        <h4 id="list-item-4">Item 4</h4>
-        <p>...</p>
-      </div> -->
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <script src="./script/Code/bootstrap.bundle.min.js"></script>
+    <script src="./script/Code/jQuery.js"></script>
+    <script src="./script/WebSuite/navbar.js"></script>
 
 </body>
-<script src="./js/visualjs/bootstrap.bundle.min.js"></script>
-<script src='https://unpkg.com/feather-icons'></script>
-<script src="./js/visualjs/jQuery.js"></script>
-<script src="./js/visualjs/anime.min.js"></script>
-<script src="./js/websuitejs/navbar.js"></script>
+
 </html>

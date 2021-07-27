@@ -1,15 +1,17 @@
 /* #a8a8a8 */
 @font-face {
-    font-family: Minecraft;
+    font-family: Minecrafts;
     src: url(../Minecraft.ttf);
 }
 
-body {
-    background: url(../img/shopbg.png) center 0 fixed;
+.home-section {
+    background-image: url(../img/rolebg.jpg);
     background-size:cover;
     background-repeat: no-repeat;
     user-select: none; 
+    overflow: hidden;
 }
+
 .info {
     background-color: black;
     color:white;
@@ -114,7 +116,7 @@ body {
     margin-top: 35px;
     text-align: right;
     text-shadow: #3e3e3e 3px 3px 0;
-    font-family: Minecraft;
+    font-family: Minecrafts;
     color: white;
     font-size: 16px;
     width: 32px;
@@ -129,9 +131,9 @@ body {
 }
 
 .scroll {
-    margin-top: 100px;
+    margin-top: 60px;
     width: auto;
-    height: 650px;
+    height: 730px;
     overflow-y: auto;
     position: relative;
 }
@@ -155,7 +157,7 @@ body {
     border-radius: 7px;
     position: absolute;
     z-index: 10;
-    font-family: Minecraft;
+    font-family: Minecrafts;
 }
 
 .hoverItem p{
@@ -183,20 +185,19 @@ body {
 }
 .type {
     padding-top: 5px;
-    font-family: Minecraft;
+    font-family: Minecrafts;
 }
 
 .sort {
     background-color: #a8a8a8;
     position: absolute;
     left: 50%;
-    transform: translate(-49%);
+    transform: translate(-50%);
     width: 220px;
     height: 58px;
     display: flex;
     align-items: center;
-    top: 31px;
-    padding-top: 12px;
+    top: 0;
     z-index: 0;
     justify-content: space-evenly;
     border-bottom-left-radius: 20px;
@@ -213,60 +214,70 @@ body {
     display: none;
 }
 
-.infobtn {
-    display: block;
-    position: fixed;
-    z-index: 1001;
-    height: auto;
-    width: auto;
+.slidebutton {
     cursor: pointer;
-    -webkit-tap-highlight-color: transparent;
-    text-align: center;
-    bottom: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    position:absolute;
+    z-index: 1001;
+    font-size: 30px;
+    color: white;
 }
 
-footer {
-    display: flex;
-    justify-content: space-evenly;
+.closebutton {
+    cursor: pointer;
+    top: 0%;
+    left: 97%;
+    position:absolute;
+    z-index: 1001;
+    font-size: 30px;
+    color: white;
+    opacity: 0;
 }
 
 .infobox {
     display: none;
-    position: fixed;
+    position:absolute;
     z-index: 1001;
     height: 792px;
     width: 600px;
-    /* background-color: rgb(255, 255, 255); */
-    margin-left: 50%;
-    transform: translate(-50%);
-    bottom: 2px;
+    /* bottom: 2px; */
+    top: 0;
     opacity: 0%;
     overflow-y: auto;
 }
+
 .infobox::-webkit-scrollbar {
     width: 0px;
 }
+
 
 td {
     text-align: center;
 }
 
-.closebtn {
-    display: block;
-    position: fixed;
-    z-index: 1001;
+.btn {
+    display: none;
+}
+
+.btn i {
     cursor: pointer;
-    -webkit-tap-highlight-color: transparent;
-    left: 98%;
-    bottom: 96%;
-    opacity: 0%;
+    top: 50%;
+    transform: translateY(-50%);
+    position:absolute;
+    z-index: 1001;
+    font-size: 30px;
+    color: white;
 }
 
 @media (max-width: 500px) {
-    .infobtn {
+    .slidebutton {
       display: none;
     }
-    .closebtn {
+    .closebutton {
         display: none;
+    }
+    .btn {
+        display: block;
     }
   }

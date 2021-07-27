@@ -1,4 +1,15 @@
-feather.replace()
+$("document").ready(function () {
+    $(".button_img").mouseenter(function () {
+        $(this).attr('src', function (index, attr) {
+            return attr.replace(".png", "-active.png");
+        });
+    });
+    $(".button_img").mouseleave(function () {
+        $(this).attr('src', function (index, attr) {
+            return attr.replace("-active.png", ".png");
+        });
+    });
+});
 
 function sortCrafts(filterGroup) {
     let list = document.querySelectorAll('.shop');
@@ -42,8 +53,13 @@ function hover(e) {
     }
     let hover = document.getElementById("hover");
     hover.innerHTML = name;
-    hover.style.top = (e.pageY - 30) + "px";
-    hover.style.left = (e.pageX + 20) + "px";
+    if (document.getElementById("side").className == "sidebar") {
+        hover.style.top = (e.pageY - 30) + "px";
+        hover.style.left = (e.pageX - 55) + "px";
+    } else if (document.getElementById("side").className == "sidebar open") {
+        hover.style.top = (e.pageY - 30) + "px";
+        hover.style.left = (e.pageX - 235) + "px";
+    }
 }
 
 createEconomy()
@@ -105,18 +121,21 @@ document.getElementById("economylist").append(newEconomy);
 function openInfo() {
     document.getElementById("infobox").style.display = "block";
     var button = anime({
-        targets: ".infobtn",
-        translateY: -780,
+        targets: ".slidebutton",
+        translateX: 1420,
+        translateY: ["-50%","-50%"],
         easing: 'easeInOutExpo'
     })
     var infobox = anime({
         targets: ".infobox",
-        height: ['0px', '792px'],
+        translateX: ['0%', '20%'],
+        left: ["0%", "20%"],
         opacity: ['0%', '100%'],
+        delay: 200,
         easing: 'easeInOutExpo'
     })
     var closebtn = anime({
-        targets: ".closebtn",
+        targets: ".closebutton",
         opacity: "100%",
         easing: 'easeInOutExpo'
     })
@@ -124,24 +143,30 @@ function openInfo() {
 
 function closeInfo() {
     var button = anime({
-        targets: ".infobtn",
-        translateY: 0,
+        targets: ".slidebutton",
+        translateX: 0,
+        translateY: ["-50%","-50%"],
         easing: 'easeInOutExpo'
     })
     var infobox = anime({
         targets: ".infobox",
-        height: ['0px', '792px'],
+        translateX: ['0%', '20%'],
+        left: ["0%", "20%"],
         opacity: ['0%', '100%'],
+        delay: 200,
         direction: 'reverse',
-        easing: 'easeInOutExpo'
+        easing: 'easeInOutExpo',
+        complete: function(anim) {
+            document.getElementById("infobox").style.display = "none";
+        }
     })
     var closebtn = anime({
-        targets: ".closebtn",
+        targets: ".closebutton",
         opacity: "100%",
         direction: 'reverse',
         easing: 'easeInOutExpo'
     })
 }
 
-$(".infobtn").click(openInfo)
-$(".closebtn").click(closeInfo)
+$(".slidebutton").click(openInfo)
+$(".closebutton").click(closeInfo)

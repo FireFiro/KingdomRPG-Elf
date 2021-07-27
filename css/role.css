@@ -1,8 +1,9 @@
-body{
-    background-image: url(../img/shopbg.png);
+.home-section {
+    background-image: url(../img/rolebg.jpg);
     background-size:cover;
     background-repeat: no-repeat;
-    user-select: none;  
+    user-select: none; 
+    overflow: hidden;
 }
 
 th img {
@@ -19,10 +20,10 @@ td img {
     text-align: center;
 }
 .scroll {
-    margin-top: 60px;
+    margin-top: 1px;
     margin-left: 13px;
     /* width: auto; */
-    height: 733px;
+    height: 790px;
     overflow-y: auto;
     position: relative;
 }

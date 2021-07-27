@@ -6,8 +6,8 @@ function createTable() {
 }
 
 function addTable(role) {
-   let div = document.querySelector("#body")
-   let HTML = `
+    let div = document.querySelector("#body")
+    let HTML = `
     <tr>
         <th class="center">${role.category}</th>
         <td class="center"><img src="${role.image}"><br>${role.name}</td>

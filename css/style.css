@@ -1,0 +1,36 @@
+.home-section {
+  background-image: url(../img/bg.jpg);
+  background-size:cover;
+  background-repeat: no-repeat;
+  user-select: none; 
+  overflow: hidden;
+}
+
+.home-section .text{
+  color: #ffffff;
+  font-size: 25px;
+  font-weight: 500;
+  margin: 18px;
+  text-align: center;
+}
+
+.logo {
+  text-align: center;
+  padding-top: 20px;
+}
+
+.logo img{
+  border-radius: 500px;
+  width: 150px;
+  image-rendering: pixelated;
+}
+
+.active {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  border-radius: 12px;
+  align-items: center;
+  text-decoration: none;
+  background: #180d8f;
+}

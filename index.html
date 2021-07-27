@@ -1,124 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./img/logo.png" type="image/png">
     <title>Elf | Главная</title>
-</head>
-<!-- CSS -->
-<link rel="stylesheet" href="./css/hover.css">
-<link rel="stylesheet" href="./css/main.css">
-<script src="./js/visualjs/bootstrap.bundle.min.js"></script>
-<link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
 <body>
-    <div class="logo">
-        <img src="./img/elflogowhiteblink.gif">
+  <div class="sidebar">
+    <div class="logo-details">
+      <i class='icon'><img src="./img/navbar/logo.png" alt=""></i>
+      <div class="logo_name">Эльфийское Сокровище</div>
+      <i class='bx bx-menu' id="btn"></i>
     </div>
-    <div id="carouselExampleControls" class="carousel slide carousel-fade" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active" data-bs-interval="999999">
-                <a class="urldisabled" onclick="sound()">
-                    <div class="table">
-                        <img src="./img/sign.png" alt="">
-                        <br>
-                        <center><p class="text">Доска объявлений</p></center>
-                        <center><p class="text">Вся инфомрмация о заданиях и поручениях в королевстве</p></center>
-                    </div>
-                </a>
-            </div>
-            <div class="carousel-item" data-bs-interval="999999">
-                <a href="role.html" class="url" onclick="sound()">
-                    <div class="table">
-                        <img src="./img/book_and_quill.png" alt="">
-                        <br>
-                        <center><p class="text">Роли</p></center>
-                        <center><p class="text">Инфомрмация о професиях и их возможностях</p></center>
-                    </div>
-                </a>
-            </div>
-            <div class="carousel-item" data-bs-interval="999999">
-                <a href="economy.html" class="url" onclick="sound()">
-                    <div class="table">
-                        <img src="./img/penny.gif" alt="">
-                        <br>
-                        <center><p class="text">Экономика</p></center>
-                        <center><p class="text">Расценки всех продоваймых вещей в королевстве</p></center>
-                    </div>
-                </a>
-            </div>
-            <div class="carousel-item" data-bs-interval="999999">
-                <a href="rule.html" class="url" onclick="sound()">
-                    <div class="table">
-                        <img style="width: 254px;" src="./img/scroll.png" alt="">
-                        <br>
-                        <center><p class="text">Законы</p></center>
-                        <center><p class="text">Законы королевства которые надо соблюдать</p></center>
-                    </div>
-                </a>
-            </div>
-            <div class="carousel-item" data-bs-interval="999999">
-                <a href="gallery.html" class="url" onclick="sound()">
-                    <div style="padding: 5px;" class="table">
-                        <img src="./img/paintings.png" alt="">
-                        <br>
-                        <center><p class="text">Галерея</p></center>
-                        <center><p class="text">Все скриншоты с мероприятий на которых мы были</p></center>
-                    </div>
-                </a>
-            </div>
+    <ul class="nav-list">
+      <li>
+        <a href="role.html">
+          <i class='bx bxs-book'></i>
+          <span class="links_name">Роли</span>
+        </a>
+        <span class="tooltip">Роли</span>
+      </li>
+      <li>
+        <a href="economy.html">
+          <i class='bx bx-money'></i>
+          <span class="links_name">Экономика</span>
+        </a>
+        <span class="tooltip">Экономика</span>
+      </li>
+      <li>
+        <a href="rule.html" class="img">
+          <i><img class="icons" src="./img/navbar/scroll.png"></i>
+          <span class="links_name">Законы</span>
+        </a>
+        <span class="tooltip">Законы</span>
+      </li>
+      <li>
+        <a href="gallery.html">
+          <i class='bx bx-image'></i>
+          <span class="links_name">Галерея</span>
+        </a>
+        <span class="tooltip">Галерея</span>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-clipboard'></i>
+          <span class="links_name">Обновления</span>
+        </a>
+        <span class="tooltip">Обновления</span>
+      </li>
+      <li class="profile">
+        <div class="profile-details">
+          <img class="profileIMG" src="./img/navbar/avatar.gif" alt="profileImg">
+          <div class="name_job">
+            <div class="name">_FireFiro_</div>
+            <div class="job">The Creator</div>
+          </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Предыдущий</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Следующий</span>
-        </button>
+        <i id="log_out"></i>
+      </li>
+    </ul>
+  </div>
+  <section class="home-section">
+    <div class="animetion">
+      <div class="logo"><img src="./img/elflogowhiteblink.gif" ></div>
+      <div class="text">Добро пожаловать</div>
+      <div class="text">Для навигации по сайту используйте навигационную панель</div>
     </div>
-    <div class="infobtn"><i data-feather="clipboard" color='white'></i></div>
-    <div class="scroll" id="scroll">
-        <div class="closebtn"><i data-feather="x" color='black'></i></div>
-        <div class="info">
-            <p class="center">Обновления</p>
-            <span>Обновление №1:</span><br>
-            <span>+ Добавленно меню обновлений</span><br>
-            <span class="date">11.07.2021</span><br><br>
+  </section>
+  <script src="./script/Code/anime.min.js"></script>
+  <script src="./script/Code/jQuery.js"></script>
+  <script src="./script/WebSuite/script.js"></script>
+  <script src="./script/WebSuite/navbar.js"></script>
 
-            <span>Обновление №2:</span><br>
-            <span>Было: Сахарный тростник(64) -> Монет(1)</span><br>
-            <span>Стало: Сахарный тростник(1152) -> Монет(1)</span><br>
-            <span class="date">13.07.2021</span><br><br>
-
-            <span>Обновление №3:</span><br>
-            <span>Сахарный тростник теперь может продавать только стража</span><br>
-            <span>Было: Нитки(24) -> Монет(1)</span><br>
-            <span>Стало: Нитки(64) -> Монет(1)</span><br>
-            <span class="date">14.07.2021</span><br><br>
-
-            <span>Обновление №4:</span><br>
-            <span>Добавлены скрины с ивента "Медовый Фестиваль"</span><br>
-            <span class="date">15.07.2021</span><br><br>
-
-            <span>Обновление №5:</span><br>
-            <span>Полное обновление экономики</span><br>
-            <span class="date">25.07.2021</span><br><br>
-
-            <span>Обновление №6:</span><br>
-            <span>В разделе экономика добавленна кнопка для просмотра правил экономики и норм</span><br>
-            <span>Данная функция сделанна только для ПК</span><br>
-            <span>Было:</span><br>
-            <span>Соль (64) -> Купюр (3)</span><br>
-            <span>Стало:</span><br>
-            <span>Соль (64) -> Купюр (2)</span><br>
-            <span class="date">25.07.2021</span><br>
-        </div>
-    </div>
 </body>
-<script src='https://unpkg.com/feather-icons'></script>
-<script src="./js/visualjs/jQuery.js"></script>
-<script src="./js/visualjs/anime.min.js"></script>
-<script src="./js/websuitejs/main.js"></script>
 </html>

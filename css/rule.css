@@ -1,16 +1,17 @@
-body {
-    background: url(../img/shopbg.png) center 0 fixed;
+.home-section {
+    background-image: url(../img/rolebg.jpg);
     background-size:cover;
     background-repeat: no-repeat;
+    user-select: none; 
     overflow: hidden;
 }
 
 .textbox {
     background-color: white;
-    margin-top: 50px;
+    /* margin-top: 50px; */
     position: relative;
     overflow: auto;
-    height: 730px;
+    height: 793px;
 }
 
 .textbox::-webkit-scrollbar {
@@ -36,5 +37,5 @@ body {
 }
 
 .list-group {
-    margin-top: 50px;
+    /* margin-top: 50px; */
 }

@@ -18,9 +18,9 @@ function onPreviousClick() {
 
 createGallery()
 function createGallery() {
-    gallery.forEach(e => {
-      addEventRPG(e)
-    })
+  gallery.forEach(e => {
+    addEventRPG(e)
+  })
 }
 
 function addEventRPG(event) {
@@ -31,24 +31,29 @@ function addEventRPG(event) {
 
 $("document").ready(function () {
   gallery.forEach(gallery => {
-  $(".image").mousemove(function (e) {
-    let name = $(this).attr("name")
-    let date = $(this).attr("date")
-    var info
-    if (name === "null") {
-      info = `<p>Название: Эльфиские скрины</p>`
-    } else {
-      info = `<p>Название: ${name}</p>
+    $(".image").mousemove(function (e) {
+      let name = $(this).attr("name")
+      let date = $(this).attr("date")
+      var info
+      if (name === "null") {
+        info = `<p>Название: Эльфиские скрины</p>`
+      } else {
+        info = `<p>Название: ${name}</p>
     <p>Дата: ${date}</p>`
-    }
-    let hover = document.getElementById("hover");
+      }
+      let hover = document.getElementById("hover");
       hover.style.display = "block"
       hover.innerHTML = info
-      hover.style.top = (e.pageY - 30) + "px";
-      hover.style.left = (e.pageX + 20) + "px";
-  });
-  $(".image").mouseleave(function () {
+      if (document.getElementById("side").className == "sidebar") {
+        hover.style.top = (e.pageY - 30) + "px";
+        hover.style.left = (e.pageX - 55) + "px";
+      } else if (document.getElementById("side").className == "sidebar open") {
+        hover.style.top = (e.pageY - 30) + "px";
+        hover.style.left = (e.pageX - 235) + "px";
+      }
+    });
+    $(".image").mouseleave(function () {
       hover.style.display = "none"
-  });
+    });
   })
 });
