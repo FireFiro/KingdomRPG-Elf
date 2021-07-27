@@ -10,6 +10,53 @@
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
    </head>
 <body>
+  <div class="modal fade" id="updateModal" tabindex="-1" aria-labelledby="updateModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Обновления</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <span>Обновление №1:</span><br>
+            <span>+ Добавленно меню обновлений</span><br>
+            <span class="date">11.07.2021</span><br><br>
+
+            <span>Обновление №2:</span><br>
+            <span>Было: Сахарный тростник(64) -> Монет(1)</span><br>
+            <span>Стало: Сахарный тростник(1152) -> Монет(1)</span><br>
+            <span class="date">13.07.2021</span><br><br>
+
+            <span>Обновление №3:</span><br>
+            <span>Сахарный тростник теперь может продавать только стража</span><br>
+            <span>Было: Нитки(24) -> Монет(1)</span><br>
+            <span>Стало: Нитки(64) -> Монет(1)</span><br>
+            <span class="date">14.07.2021</span><br><br>
+
+            <span>Обновление №4:</span><br>
+            <span>Добавлены скрины с ивента "Медовый Фестиваль"</span><br>
+            <span class="date">15.07.2021</span><br><br>
+
+            <span>Обновление №5:</span><br>
+            <span>Полное обновление экономики</span><br>
+            <span class="date">25.07.2021</span><br><br>
+
+            <span>Обновление №6:</span><br>
+            <span>В разделе экономика добавленна кнопка для просмотра правил экономики и норм</span><br>
+            <span>Данная функция сделанна только для ПК</span><br>
+            <span>Было:</span><br>
+            <span>Соль (64) -> Купюр (3)</span><br>
+            <span>Стало:</span><br>
+            <span>Соль (64) -> Купюр (2)</span><br>
+            <span class="date">25.07.2021</span><br><br>
+
+            <span>Обновление №7:</span><br>
+            <span>Переписан внешний вид сайта</span><br>
+            <span class="date">28.07.2021</span><br>
+        </div>
+      </div>
+    </div>
+</div>
   <div class="sidebar">
     <div class="logo-details">
       <i class='icon'><img src="./img/navbar/logo.png" alt=""></i>
@@ -46,7 +93,7 @@
         <span class="tooltip">Галерея</span>
       </li>
       <li>
-        <a href="#">
+        <a href="#" data-bs-toggle="modal" data-bs-target="#updateModal">
           <i class='bx bx-clipboard'></i>
           <span class="links_name">Обновления</span>
         </a>
