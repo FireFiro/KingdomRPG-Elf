@@ -528,5 +528,10 @@ var item = {
         "name": "<span>Глина</span>",
         "image": "./img/shopItem/clay.png",
         "lore": []
+    },
+    "Oak_Leaves": {
+        "name": "<span>Дубовая листва</span>",
+        "image": "./img/shopItem/oak_leaves.png",
+        "lore": []
     }
 }

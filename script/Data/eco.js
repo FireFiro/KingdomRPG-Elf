@@ -2,7 +2,7 @@ var economy = [
     {
         "type": "farmer",
         "class": "shop",
-        "sale": ["Money",],
+        "sale": ["Coin"],
         "buy": "Carrot",
         "sale_count": ["3"],
         "buy_count": "16",
@@ -10,7 +10,7 @@ var economy = [
     {
         "type": "farmer",
         "class": "shop",
-        "sale": ["Money"],
+        "sale": ["Coin"],
         "buy": "Bread",
         "sale_count": ["4"],
         "buy_count": "16",
@@ -20,7 +20,7 @@ var economy = [
         "class": "shop",
         "sale": ["Money"],
         "buy": "Rabbit",
-        "sale_count": ["3"],
+        "sale_count": ["1"],
         "buy_count": "16",
     },
     {
@@ -272,7 +272,7 @@ var economy = [
         "class": "shop",
         "sale": ["Coin"],
         "buy": "Gravel",
-        "sale_count": ["4"],
+        "sale_count": ["2"],
         "buy_count": "64",
     },
     {
@@ -374,7 +374,7 @@ var economy = [
         "class": "shop",
         "sale": ["Money"],
         "buy": "Elf_pickaxe_tieri",
-        "sale_count": ["10"],
+        "sale_count": ["8"],
         "buy_count": "1",
     },
     {
@@ -382,7 +382,7 @@ var economy = [
         "class": "shop",
         "sale": ["Money"],
         "buy": "Elf_axe_tieri",
-        "sale_count": ["10"],
+        "sale_count": ["8"],
         "buy_count": "1",
     },
     {
@@ -414,7 +414,7 @@ var economy = [
         "class": "shop",
         "sale": ["Money"],
         "buy": "People_pickaxe_tieri",
-        "sale_count": ["16"],
+        "sale_count": ["14"],
         "buy_count": "1",
     },
     {
@@ -422,7 +422,7 @@ var economy = [
         "class": "shop",
         "sale": ["Money"],
         "buy": "People_axe_tieri",
-        "sale_count": ["16"],
+        "sale_count": ["14"],
         "buy_count": "1",
     },
     {
@@ -563,7 +563,7 @@ var economy = [
     },
     {
         "type": "military",
-        "class": "shop",
+        "class": "shopclose",
         "sale": ["Flint"],
         "buy": "Money",
         "sale_count": ["64"],
@@ -631,15 +631,24 @@ var economy = [
         "sale": ["Oak_Log"],
         "buy": "Coin",
         "sale_count": ["64"],
-        "buy_count": "2",
+        "buy_count": "4",
     },
     {
         "type": "military",
         "class": "shop",
-        "sale": ["Oak_Log"],
+        "sale": ["Clay"],
         "buy": "Coin",
         "sale_count": ["64"],
-        "buy_count": "4",
+        "buy_count": "2",
+    },
+    ,
+    {
+        "type": "military",
+        "class": "shop",
+        "sale": ["Oak_Leaves"],
+        "buy": "Coin",
+        "sale_count": ["64"],
+        "buy_count": "2",
     },
     {
         "type": "other",
