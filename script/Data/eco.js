@@ -476,7 +476,7 @@ var economy = [
         "class": "shop",
         "sale": ["Money"],
         "buy": "Shild",
-        "sale_count": ["1"],
+        "sale_count": ["7"],
         "buy_count": "1",
     },
     {
