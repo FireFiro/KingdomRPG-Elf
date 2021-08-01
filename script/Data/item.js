@@ -523,5 +523,10 @@ var item = {
         "name": "<span>Сырой лосось</span>",
         "image": "./img/shopItem/raw_salmon.png",
         "lore": []
+    },
+    "Clay": {
+        "name": "<span>Глина</span>",
+        "image": "./img/shopItem/clay.png",
+        "lore": []
     }
 }
