@@ -14,13 +14,19 @@ $("document").ready(function () {
 function sortCrafts(filterGroup) {
     let list = document.querySelectorAll('.shop');
     list.forEach(elem => {
-        console.log(elem.getAttribute("type"))
-        console.log(filterGroup)
         if ((!filterGroup || elem.getAttribute("type") == filterGroup/* || elem.getAttribute("type") == "minecraft"*/ || elem.getAttribute("type") == "all")) {
             elem.classList.remove('hide');
         } else {
             elem.classList.add('hide');
         }
+    let list2 = document.querySelectorAll('.shopclose')
+    list2.forEach(elem => {
+        if ((!filterGroup || elem.getAttribute("type") == filterGroup/* || elem.getAttribute("type") == "minecraft"*/ || elem.getAttribute("type") == "all")) {
+            elem.classList.remove('hide');
+        } else {
+            elem.classList.add('hide');
+        }
+    })
 });
 }
 
